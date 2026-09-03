@@ -1,0 +1,147 @@
+Le DaT Parkinson's Challenge | Plateforme des données de santé
+Vous êtes…
+Citoyen
+Utilisateur de données
+Responsable de données
+Candidat
+Vous êtes…
+Citoyen
+Utilisateur de données
+Responsable de données
+Candidat
+Explorer la PDS
+Qui sommes-nous ?
+Notre organisation
+Comité stratégique des données de santé
+La PDS à l'international
+Nos évènements
+Nos appels à projets
+Les Data Challenges en santé
+Notre offre pour les EDS
+Notre entrepôt EMC2
+Ressources
+Marchés publics
+Déposer votre projet
+Plateformes de dépôt
+Calendrier du CESREES
+Enregistrer un projet
+Répertoire public des projets
+Projets lauréats
+Chiffres clés
+CESREES
+Notre offre de service
+Laissez-vous guider
+Démarches réglementaires
+Intérêt public
+Information patient
+Mon interface d’appariement
+Starter kit pour l'autorisation CNIL
+Starter kit pour la MR 004
+Starter kit pour la MR 007
+Starter kit pour la MR 008
+Starter kit entrepôts de données de santé
+Formations
+Offre technologique
+Open science
+Bibliothèque Ouverte d'Algorithmes en Santé
+Découvrir les données
+SNDS historique
+Répertoire national des bases de données de santé
+Nos engagements
+Accéder à une base de l'Entrepôt de la PDS
+Partager une base sur l'Entrepôt de la PDS
+Référencer sa base dans le répertoire national des bases de données de santé
+Notre catalogue de métadonnées
+Compléter les métadonnées de votre base
+Actualités
+Accueil
+Le DaT Parkinson's Challenge
+Le DaT Parkinson's Challenge
+Améliorer le diagnostic des syndromes parkinsoniens par l’application des outils de l’intelligence artificielle aux imageries cérébrales de l’activité du transporteur de la dopamine en médecine nucléaire.
+Partager
+Le DaT Parkinson's Challenge est une compétition internationale en science des données organisée par la
+Société Française de Médecine Nucléaire
+(SFMN).
+Son objectif : développer des outils d’intelligence artificielle capables d’automatiser et d’améliorer l’interprétation des examens en médecine nucléaire.
+Depuis le 22 juillet 2026, des équipes du monde entier s’affrontent pendant 8 semaines pour concevoir le modèle d’IA le plus performant dans la
+classification d’examens cérébraux pour le diagnostic de la maladie de Parkinson (et syndromes apparentés)
+.
+Les modèles seront développés grâce à l’analyse d’une base de données inédite de
+plus de 2 000 examens scintigraphiques
+, normaux ou pathologiques, explorant l’activité du transporteur de la dopamine (DaT), élément clé dans le diagnostic des syndromes parkinsoniens.
+Rejoignez
+la compétition !
+Les modèles des lauréats seront publiés en open source et référencés dans la
+BOAS
+, tandis que les données mobilisées seront rendues accessibles en open data sur la plateforme
+data.gouv
+.
+Ce challenge s’inscrit dans le cadre de l’
+Appel à projets “Data Challenges en santé"
+, soutenu financièrement par le plan France 2030 et accompagné par la Plateforme des données de santé.
+DaT Parkinson's Challenge : zoom sur la problématique médicale
+Chaque année, plus de 20 000 DaT-scanners sont réalisés en France dans près de 200 centres répartis sur tout le territoire.
+Cet examen d’imagerie en médecine nucléaire vise à évaluer l’activité du transporteur de la dopamine dans le cerveau. Son interprétation est généralement binaire : normale ou pathologique — environ un tiers des examens sont normaux, et deux tiers montrent une anomalie.
+L’analyse repose principalement sur des critères morphologiques visuels (comme l’asymétrie ou le gradient d’intensité), parfois complétés par des mesures semi-quantitatives (ratios de fixation).
+Lorsqu’un examen est jugé pathologique, il permet de confirmer la nature neurodégénérative d’un syndrome parkinsonien, apportant ainsi une aide précieuse au diagnostic et à la prise en charge des patients.
+Cependant, environ 20 % des examens restent difficiles à interpréter, avec un indice de confiance dégradé, notamment dans les cas atypiques ou précoces de la maladie.
+Pour répondre à cette difficulté, la Société Française de Médecine Nucléaire (SFMN) a lancé le DaT-Park Challenge, avec l’objectif de mobiliser les outils d’intelligence artificielle pour améliorer la fiabilité et la précision de l’interprétation de ces examens.
+Une base de données unique en neuroimagerie du transporteur de la dopamine
+Onze centres hospitaliers français, répartis sur tout le territoire, se sont unis pour constituer et annoter une base de données exceptionnelle de plus de 2 000 DaT-scanners.
+Ces examens, réalisés en imagerie tomographique par émission monophotonique (TEMP), permettent d’explorer le transporteur de la dopamine, un marqueur essentiel dans le diagnostic des syndromes parkinsoniens.
+Ce projet collaboratif d’envergure nationale mobilise les établissements suivants :
+Centre Hospitalier Universitaire de Toulouse - Occitanie
+Centre Hospitalier Régional Universitaire de Nancy - Grand Est
+Centre Hospitalier Régional Universitaire de Tours - Centre-Val de Loire
+Centre Henri Becquerel - Centre de Lutte Contre le Cancer de Rouen - Normandie
+Centre Hospitalier Régional et Universitaire de Brest - Bretagne
+Centre Hospitalier Universitaire Grenoble Alpes - Auvergne-Rhône-Alpes
+Hospices Civils de Lyon - Auvergne-Rhône-Alpes
+Centre Jean Perrin - CLCC Jean Perrin - Auvergne-Rhône-Alpes
+Assistance Publique - Hôpitaux de Marseille - Provence-Alpes-Côte d’Azur
+Institut Godinot - Centre de lutte contre le cancer de Reims - Grand Est
+ICANS - Institut de Cancérologie Strasbourg Europe - Grand Est
+Cette initiative inédite contribue à enrichir la recherche en neurosciences et à mieux comprendre les pathologies neurodégénératives, en mettant à disposition une base de données rigoureusement constituée et annotée par des experts de médecine nucléaire.
+Ouverture des données et perspectives
+La mise à disposition en open data de cette base de données inédite offrira un accès libre et gratuit à l’ensemble des examens et annotations, favorisant ainsi de nouvelles collaborations en recherche et innovation dans le domaine de la médecine nucléaire.
+Grâce à sa qualité scientifique et à son annotation experte, cette base constituera également un support pédagogique de référence pour la formation des médecins nucléaires et des chercheurs en imagerie médicale.
+Les modèles d’intelligence artificielle développés par les équipes lauréates seront publiés en open source et déployables à l’international, rendant l’expertise en analyse de DaT-scanner plus accessible et ouvrant la voie à de nouveaux outils d’aide au diagnostic des syndromes parkinsoniens.
+Les partenaires
+Les chefs de services investigateurs :
+Pr Pierre Payoux (CHU de Toulouse)
+Pr Antoine Verger (CHU de Nancy)
+Pr Maria-Joao Santiago Ribeiro (CHU de Tours)
+Dr Pierre Decazes (Centre Henri Becquerel)
+Pr Solène Querellou (CHU de Brest)
+Pr Nicolas de Leiris (CHU de Grenoble)
+Pr Anthime Flaus (HCL de Lyon)
+Dr Clément Bouvet (CLCC Jean Perrin)
+Pr Eric Guedj (APHM)
+Pr Dimitri Papathanassiou (Insitut Godinot)
+Dr Caroline Bund (ICANS)
+La SFMN :
+Pr Eric Guedj : Hôpitaux Universitaires de Marseille, Responsable GT-Neuro de la SFMN
+Pr Florent Cachin : PU-PH Médecine nucléaire, Responsable Universitaire Département d’Imagerie - Centre Jean Perrin Clermont-Ferrand
+Imad Bousaid : chef de projet
+Le programme Data Challenges en santé
+Depuis 2020, par le biais des Appels à Projets “Data Challenges en santé”, la Plateforme des données de santé accompagne des acteurs de l'écosystème de la santé dans l’organisation de projets de Data Challenge portant sur des thématiques médicales d’intérêt et à portée internationale.
+Ces projets bénéficient d’un soutien financier de Bpifrance ainsi que d’un accompagnement logistique, technique et organisationnel de bout en bout par les équipes de la Plateforme des données de santé.
+Découvrez l'ensemble des Data Challenges sur la page
+Les Data Challenges en santé
+.
+Pour en savoir plus sur l’appel à projets “Data Challenges en santé”, rendez-vous sur la
+page dédiée
+.
+L’accès aisé et unifié, transparent et sécurisé, aux données de santé pour améliorer la qualité des soins et l’accompagnement des patients.
+Suivez toute l’actualité de la Plateforme des données de santé
+S'abonner à l'infolettre
+Contactez-nous
+©
+							2026 Plateforme des données de santé
+Mentions légales
+Politique de confidentialité
+Politique de cookies
+Gestion des cookies
+Marchés publics
+FAQ
+Nous rejoindre

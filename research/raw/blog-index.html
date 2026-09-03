@@ -1,0 +1,1748 @@
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" class="scroll-smooth">
+    <head>
+        <link rel="preload"
+              href="/theme/fonts/nunito-sans/nunito-sans-v18-latin-regular.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="/theme/fonts/nunito-sans/nunito-sans-v18-latin-700.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="/theme/fonts/exo-2/exo-2-v25-latin-300.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+
+        <link rel="stylesheet" href="/dist/css/main.css">
+
+        <title>
+Blog - DrivenData        </title>
+        <!-- Using the latest rendering mode for IE -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+              content="DrivenData helps mission-driven organizations harness their data to work smarter and offer more impactful services using data science, machine learning, and AI.">
+
+<link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+            <meta property="og:site_name" content="DrivenData" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="DrivenData" />
+                <meta property="og:url" content="https://www.drivendata.co" />
+                <meta property="og:description" content="DrivenData helps mission-driven organizations harness their data to work smarter and offer more impactful services using data science, machine learning, and AI." />
+            <meta property="og:image" content="https://www.drivendata.co/theme/images/logos/logo-drivendata-background.png" />
+
+            <link href="https://www.drivendata.co/feeds/all.atom.xml"
+                  type="application/atom+xml"
+                  rel="alternate"
+                  title="DrivenData ATOM Feed" />
+
+
+    </head>
+    <body data-page-type="blog" class="">
+
+<nav class="group p-0 lg:p-5 "
+     aria-label="Main navigation">
+  <div class="bg-default px-2 py-5 lg:p-5 lg:rounded max-w-[1440px] mx-auto md:flex items-center">
+
+    <div class="flex">
+      <a href="https://www.drivendata.co"
+         title="Home"
+         class="-m-5 p-5 flex items-start shrink">
+          <div class="icon-svg h-6 lg:h-6"
+>
+<svg enable-background="new 0 0 967.5 155.9" viewBox="0 0 967.5 155.9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="617.1313" x2="743.1313" xlink:href="#a" y1="8.5736" y2="8.5736"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="617.1313" x2="825.0314" xlink:href="#a" y1="36.2936" y2="36.2936"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="617.1313" x2="888.0314" xlink:href="#a" y1="64.0136" y2="64.0136"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="617.1313" x2="773.2313" xlink:href="#a" y1="91.7336" y2="91.7336"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="617.1313" x2="873.3314" xlink:href="#a" y1="119.4536" y2="119.4536"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="617.1313" x2="946.8314" xlink:href="#a" y1="147.1736" y2="147.1736"/><path d="m738.2 17.1h-121.1v-17h126z" fill="url(#b)"/><path d="m617.1 27.8h207.9v17h-207.9z" fill="url(#c)"/><path d="m883.1 72.5h-266v-17h270.9z" fill="url(#d)"/><path d="m773.2 100.2h-156.1v-17h152.6z" fill="url(#e)"/><path d="m869.1 128h-252v-17h256.2z" fill="url(#f)"/><path d="m946.8 155.7h-329.7v-17h325.5z" fill="url(#g)"/><g fill="#fff"><path d="m0 155.9v-155.9h60.7c7.1 0 21.2 3.1 30.1 17.7 6.7 10.8 8.5 28.1 8.5 53.8 0 30.8 0 66.3-23.9 80.2-6.4 3.7-14.3 4.2-21.6 4.2zm41.8-22.8c26 0 27.7-13.7 27.7-58.8 0-36.8-3.7-51.4-21.2-51.4h-19.2v110.2z"/><path d="m146.3 88.8v67.2h-29.1v-156h55.1c25.2 0 44.3 8.7 44.3 37.4 0 17-4.4 34.9-23.9 37.6v.4c17.3 2.3 22.5 13.3 22.5 28.3v6.7c0 13.1.4 38.9 6.2 42.6v2.9h-32c-2.9-8.1-3.1-22.2-3.1-32.6v-6.9c-.2-9.6 0-22.7-10-25.6-6.7-1.9-13.7-2.1-20.8-2.1h-3.9-5.3zm0-22.9h22.9c9.6-.6 17-6.9 17-22.5 0-17.5-7.3-20.4-18.3-20.6h-21.6z"/><path d="m237.2 155.9v-155.9h29.1v155.9z"/><path d="m355.5 0h31.2l-33.7 155.9h-38.9l-34.4-155.9h31.2l18.3 100c1.7 8.7 2.7 17.7 3.5 26.6.4 4.2 1.2 8.5 1.2 12.9h.4c0-4.4.8-8.7 1.2-12.9.8-8.9 1.9-17.9 3.5-26.6z"/><path d="m399.7 155.9v-155.9h81.9v22.9h-52.8v39.3h48.6v22.8h-48.6v48h52.8v22.9z"/><path d="m566.8 0h29.1v155.9h-30.4l-22.7-55.5c-7.7-18.5-13.9-37.4-20.8-62h-.4c1 12.9 2.3 28.7 3.1 44.5.8 15.6 1.5 31.2 1.5 43.7v29.3h-29.1v-155.9h30.1l22.7 56.8c7.5 18.1 13.7 36.6 20.8 62h.4c-1-14.1-2.1-29.3-2.9-44.3s-1.5-29.9-1.5-43.9v-30.6z"/><path d="m616.5 0h27.9c17.7 0 33.5 1 46.2 14.8 10.4 12.5 15 35.8 15 51.4 0 17.7.4 41.2-6 58-9.6 26.8-26.4 31.8-52.4 31.8h-30.6v-156zm13.6 143.9h16.2c7.7 0 16.8 0 23.9-3.3 20.8-9.6 21.8-43.9 21.8-62.8 0-19.8.4-50.9-20.2-62.2-8.1-4.4-20.8-4-30.1-3.5h-11.6z"/><path d="m766.6 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/><path d="m796.4 12.1v-12.1h84.2v12.1h-35.3v143.9h-13.5v-143.9z"/><path d="m925.7 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/></g></svg>  </div>
+
+      </a>
+    </div>
+    <button class="flex md:hidden absolute top-5 right-2 text-white"
+      aria-expanded="false"
+      onclick="toggleMenu()"
+      ">
+      <div aria-label="Open menu">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-menu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <line x1="4" x2="20" y1="12" y2="12" />
+  <line x1="4" x2="20" y1="6" y2="6" />
+  <line x1="4" x2="20" y1="18" y2="18" />
+</svg>  </div>
+</div>
+      <div aria-label="Close menu" class="hidden">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg>  </div>
+</div>
+    </button>
+
+    <div class="hidden group-data-open:flex md:block! w-full md:ms-8">
+      <ul class="pt-7 md:pt-0 flex flex-col md:flex-row items-start gap-5 md:gap-4 lg:gap-8 md:items-center w-full">
+
+        <li class="md:hidden xl:block">  <a href="https://www.drivendata.co/#services"
+     class="nav-header-link"
+>Services</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/projects/"
+     class="nav-header-link"
+>Projects</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/open-source/"
+     class="nav-header-link"
+>Open source</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/government/"
+     class="nav-header-link"
+>Government</a>
+</li>
+
+        <li class="grow">
+          <a href="https://www.drivendata.org"
+             target="_blank"
+             class="inline-block nav-header-link">Competitions   <div class="icon-svg icon-xs"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>  </div>
+</a>
+        </li>
+        <li>  <a href="https://www.drivendata.co/blog/"
+     class="nav-header-link"
+aria-current="page">Blog</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/insights/"
+     class="nav-header-link"
+>Insights</a>
+</li>
+        <li class="md:hidden xl:block">  <a href="https://www.drivendata.co/team/"
+     class="nav-header-link"
+>About</a>
+</li>
+        <li>
+          <a href="https://www.drivendata.co#contact"
+             class="btn-inverse-outline-primary px-10 md:px-5 py-1 font-normal">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+    let isNavOpen = false;
+
+    function toggleMenu() {
+        const elNav = document.querySelector('nav[aria-label="Main navigation"]');
+        const elMenuButton = elNav.querySelector('button[aria-expanded]');
+
+        isNavOpen = !isNavOpen;
+
+        elNav.toggleAttribute('data-open', isNavOpen);
+        elMenuButton.setAttribute('aria-expanded', isNavOpen ? 'true' : 'false');
+
+        Array.from(elMenuButton.children).forEach(child => child.classList.toggle('hidden'));
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isNavOpen) {
+            toggleMenu();
+        }
+    });
+</script>
+        <div id="mainContainer">
+
+
+<div class="pt-10"></div>
+<header>
+  <div class="section-content">
+    <div class="flex flex-col items-center">
+      <h1 class="h3 font-display">DrivenData blog</h1>
+      <p class="mt-5 max-w-4xl text-muted text-center text-lg/6">Explore the latest in our mission to build a better world using data science and AI.</p>
+    </div>
+  </div>
+</header>
+  <div class="section-content">
+    <div class="pt-5"></div>
+<div class="flex flex-wrap gap-2 justify-center items-center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="component-tag text-primary border-primary"
+     data-tag=""
+     href="/blog/">All</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="tutorial"
+       href="/tag/tutorial/">tutorial</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="competition"
+       href="/tag/competition/">competition</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="resources"
+       href="/tag/resources/">resources</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="winners"
+       href="/tag/winners/">winners</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="insights"
+       href="/tag/insights/">insights</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="community"
+       href="/tag/community/">community</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="tools"
+       href="/tag/tools/">tools</a>
+    <!-- text-default border-default -->
+    <a class="component-tag "
+       data-tag="media"
+       href="/tag/media/">media</a>
+
+</div>    <div class="pt-5"></div>
+  </div>
+
+<section class="section-content">
+  <h2 class="sr-only">Content list</h2>
+
+
+    <div class="pt-10"></div>
+
+    <div class="grid grid-rows-[auto,auto] gap grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+
+
+
+
+
+  <div class="group flex flex-col h-full xl:col-span-2 xl:mb-10 gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-education="1"data-tag-text data="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/productive-math-talk-reference" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kaiip-trace-the-ace.png"
+               class="duration-600  transition ease-in-out w-full h-40 xl:h-60 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-07-27T00:00:00-04:00" class="text-sm text-muted"> 27 Jul 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/productive-math-talk-reference" class="no-underline hover:underline">Productive math talk: a simple reference solution for Trace the Ace</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A simple scikit-learn reference solution for predicting whether a student answers their next assessment question correctly from tutoring session transcripts in the Trace the Ace challenge.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full xl:col-span-2 xl:mb-10 gap-4"
+data-tag-resources="1"data-tag-competition="1"data-tag-education="1"data-tag-LLMs="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/k12-ai-infrastructure-platform-launch" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kaiip-platform-launch.png"
+               class="duration-600  transition ease-in-out w-full h-40 xl:h-60 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/resources/">resources</a>    <div>
+        <time datetime="2026-06-16T00:00:00-04:00" class="text-sm text-muted"> 16 Jun 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/k12-ai-infrastructure-platform-launch" class="no-underline hover:underline">Launching the K-12 AI Infrastructure Platform</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Open Datasets, Benchmarks, and Challenges for Education AI</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/on-top-of-pasketti-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-group-small.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2026-06-12T00:00:00-04:00" class="text-sm text-muted"> 12 Jun 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/on-top-of-pasketti-winners" class="no-underline hover:underline">Meet the winners of the On Top of Pasketti: Children's Speech Recognition Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how competition winners, working with one of the largest labeled children's speech datasets assembled, cut transcription error rates in half.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/impact-report" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/dendrogram-impact-report.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-05-21T00:00:00-04:00" class="text-sm text-muted"> 21 May 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/impact-report" class="no-underline hover:underline">DrivenData 10-Year Impact Report: Three pathways to creating social impact with data science and AI</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>An overview of how DrivenData’s impact is built through projects, portfolios, and people working together.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-audio data="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/child-asr-phonetic-reference-implementation" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-phon-small.jpeg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-03-10T00:00:00-04:00" class="text-sm text-muted"> 10 Mar 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/child-asr-phonetic-reference-implementation" class="no-underline hover:underline">Improving Automatic Speech Recognition for Kids - A Reference Implementation for Phonetic-level Transcription</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A step-by-step guide to training a model to predict phonetic symbols for the On Top of Pasketti Challenge (Phonetic Track)</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-audio data="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/child-asr-word-benchmark" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-word-small.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-02-27T00:00:00-05:00" class="text-sm text-muted"> 27 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/child-asr-word-benchmark" class="no-underline hover:underline">Improving Automatic Speech Recognition for Kids - A Reference Implementation for Word-level Transcription</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how to train a model to transcribe child speech for the On Top of Pasketti Challenge (Word Track)</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-resources="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/pipeline-challenges" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/data-pipeline.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-02-18T00:00:00-05:00" class="text-sm text-muted"> 18 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/pipeline-challenges" class="no-underline hover:underline">5 Challenges of Creating Beautiful Data Pipelines</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A look into the hidden complexity of data pipelines, and some suggestions to improve the process.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-LLMs="1"data-tag-competition="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/ai-agents-data-science-competitions" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/ai-agents-data-science-competitions.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-02-02T00:00:00-05:00" class="text-sm text-muted"> 2 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/ai-agents-data-science-competitions" class="no-underline hover:underline">AI Agents in Data Science Competitions: Lessons from the Leaderboard</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>How good are AI agents at data science? Here's what we've learned from initial experiments about what works, what doesn't, and what the future might hold.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/candid" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/case-study-candid.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2026-01-28T00:00:00-05:00" class="text-sm text-muted"> 28 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/candid" class="no-underline hover:underline">Linking nonprofit grants to organizations with machine learning</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData built Orgmatch, a scalable and explainable entity resolution system to add value to information processed by a leading nonprofit data hub.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-tools="1"data-tag-open source="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/cyfi-small-water-bodies" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/cyfi-example-water-body-1.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-01-27T00:00:00-05:00" class="text-sm text-muted"> 27 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/cyfi-small-water-bodies" class="no-underline hover:underline">Bringing small water bodies into view: Sentinel-2 satellite monitoring of harmful algal blooms (HABs)</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>CyFi enhances modern HAB monitoring programs by extending their reach and informing field-based components.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-tools="1"data-tag-open source="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/last-mile-public-data" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/last-mile-timeline.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-01-05T00:00:00-05:00" class="text-sm text-muted"> 5 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/last-mile-public-data" class="no-underline hover:underline">Solving the last-mile public data problem</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Using "baked" data to transform public data repositories into analysis-ready resources</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-media="1"data-tag-energy="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/drivendata-joins-genesis-mission" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/genesis-mission-launch.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/media/">media</a>    <div>
+        <time datetime="2025-12-22T00:00:00-05:00" class="text-sm text-muted"> 22 Dec 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/drivendata-joins-genesis-mission" class="no-underline hover:underline">DrivenData Joins U.S. Department of Energy's Genesis Mission to Advance AI for Science and the Public Good</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Social impact data science organization brings decade of federal open innovation experience to historic national initiative</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/tangled-titles" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/bwdc-case-study.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-12-05T00:00:00-05:00" class="text-sm text-muted"> 5 Dec 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/tangled-titles" class="no-underline hover:underline">Quantifying unclear property titles (“tangled titles”) trapping billions in wealth in American cities</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData conducted a multi-city study of the prevalence and sources of tangled titles in partnership with the Center for Opportunity and Wealth Data to help policymakers and practitioners combat a major barrier to building intergenerational wealth.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-health="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/prepare-phase3-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/prepare-challenge-tile.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2025-11-24T00:00:00-05:00" class="text-sm text-muted"> 24 Nov 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/prepare-phase3-winners" class="no-underline hover:underline">Meet the winners of Phase 3 of the PREPARE Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how teams developed proof-of-concept approaches for real-world early Alzheimer's prediction</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/aiai-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/uva-aiai-tile.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2025-10-22T00:00:00-04:00" class="text-sm text-muted"> 22 Oct 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/aiai-winners" class="no-underline hover:underline">Meet the winners of the AI for Advancing Instruction Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how the winners of the AIAI challenge leveraged multimodal classroom data to identify instructional activities and classroom discourse content.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/automating-wildlife-monitoring-with-zamba-zamba-cloud" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/case-study-zamba.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-09-04T00:00:00-04:00" class="text-sm text-muted"> 4 Sep 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/automating-wildlife-monitoring-with-zamba-zamba-cloud" class="no-underline hover:underline">Automating wildlife monitoring with Zamba & Zamba Cloud</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData partnered with conservation researchers to create Zamba, an open-source machine learning solution that helps wildlife researchers process camera trap footage, reducing months of manual review to hours of automated analysis.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/community-spotlight-igcpharma" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/igcpharma_spotlight.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/community/">community</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/community-spotlight-igcpharma" class="no-underline hover:underline">Community Spotlight: Paola Ruiz, Néstor González, Daniel Crovo</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>The Community Spotlight features fantastic members from our DrivenData community. Three members of the IGCPHARMA team, Paola Ruiz, Néstor González, and Daniel Crovo talk to us about data science, drug discovery, diverse databases and more!</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/community-spotlight-kbrodt" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kbrodt.jpeg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/community/">community</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/community-spotlight-kbrodt" class="no-underline hover:underline">Community Spotlight: Kirill Brodt</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>The Community Spotlight features fantastic members from our DrivenData community. Kirill Brodt, a researcher in computer graphics at the University of Montreal, talks animation, pose estimation, and data science challenges.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies//codepath-data-infrastructure" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/client-codepath-data-infrastructure.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies//codepath-data-infrastructure" class="no-underline hover:underline">Jump-starting data infrastructure and in-house data expertise</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData designed and built a data warehouse to centralize, organize, and visualize data across CodePath's operations. Our team also provided technical hiring assistance to find the right talent to carry the work forward.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies//production-application-survivor-support" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/everfree-freedom-lifemap.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-06-04T00:00:00-04:00" class="text-sm text-muted"> 4 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies//production-application-survivor-support" class="no-underline hover:underline">A production application to support survivors of human trafficking</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData developed Freedom Lifemap, a digital tool designed to support survivors of human trafficking on their journey toward reintegration and independence.</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-competition="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/life-beyond-the-leaderboard" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/leaderboard-screenshot.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2025-05-13T00:00:00-04:00" class="text-sm text-muted"> 13 May 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/life-beyond-the-leaderboard" class="no-underline hover:underline">Life beyond the leaderboard</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>What happens to winning solutions after a machine learning competition?</p></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/tech-infrastructure-week-for-the-nonprofit-sector" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/tech-infrastructure-week-for-the-nonprofit-sector_banner.jpeg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2025-05-08T00:00:00-04:00" class="text-sm text-muted"> 8 May 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/tech-infrastructure-week-for-the-nonprofit-sector" class="no-underline hover:underline">(Tech) Infrastructure Week for the Nonprofit Sector</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Reflections on how to build data and AI infrastructure in the social sector that serves the needs of nonprofits and their beneficiaries.</p></span>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <div class="pt-15"></div>
+    <div class="flex justify-center">
+            <nav aria-label="Pagination">
+                <ul class="flex gap-1 items-center flex-wrap">
+                        <li aria-current="page"
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <div class="font-bold">1</div>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/2/">2</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/3/">3</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/4/">4</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/5/">5</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/6/">6</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/7/">7</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/8/">8</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/9/">9</a>
+                        </li>
+                        <li aria-current=""
+                            class="hidden lg:flex min-w-15 justify-center">
+                                <a class="btn-outline-secondary no-underline"
+                                   href="/blog/10/">10</a>
+                        </li>
+                        <li>
+                            <a class="btn-outline-secondary no-underline min-w-32"
+                               href="https://www.drivendata.co/blog/2/">Next
+                                  <div class="icon-svg icon-sm"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>  </div>
+
+                            </a>
+                        </li>
+                </ul>
+            </nav>
+    </div>
+</section>
+
+<div class="pb-30"></div>
+<section class="section-content" id="subscribe">
+  <div class="bg-[#F4FAFF] border border-[#BADDFA] rounded-md p-5 lg:p-10 flex items-end gap-x-10 flex-col lg:flex-row">
+    <div>
+      <div class="mb-3 flex gap-x-5 flex-wrap-reverse items-center">
+        <h2 class="h3 font-display mb-2">Stay updated</h2>
+<ul class="flex items-center">
+  <li>
+    <a aria-label="X"
+       target="_blank"
+       href="https://x.com/drivendataorg">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.9012 2H22L15.2286 9.74043L23.1931 22H16.9564L12.0722 14.5628L5.56339 22H2.46243L9.70639 13.7227L2.06445 2H8.46051L12.8753 8.79829L18.9012 2ZM17.8136 20.0321H19.5307L7.52752 3.86474H5.68547L17.8136 20.0321Z"
+                fill="currentColor" />
+        </svg>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a aria-label="Bluesky" target="_blank" href="https://bsky.app/profile/drivendata.org">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.33526 3.34625C8.62822 5.30132 11.0945 9.26541 12.0001 11.3928C12.9056 9.26556 15.3718 5.30128 17.6649 3.34625C19.3193 1.93554 22 0.844017 22 4.3173C22 5.01097 21.6498 10.1444 21.4444 10.9778C20.7306 13.8753 18.1292 14.6143 15.8152 14.167C19.86 14.9489 20.8889 17.5387 18.6668 20.1285C14.4465 25.047 12.601 18.8944 12.1278 17.3179C12.0412 17.0289 12.0006 16.8937 12 17.0086C11.9994 16.8937 11.9588 17.0289 11.8721 17.3179C11.3993 18.8944 9.55378 25.0472 5.33322 20.1285C3.11103 17.5387 4.13995 14.9487 8.18483 14.167C5.87077 14.6143 3.26934 13.8753 2.55555 10.9778C2.35016 10.1443 2 5.01089 2 4.3173C2 0.844017 4.68074 1.93554 6.33515 3.34625H6.33526Z" stroke="black" style="stroke:currentColor;" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </span></a>
+    </li>
+    <li>
+      <a aria-label="LinkedIn"
+         target="_blank"
+         href="https://www.linkedin.com/company/9202422/">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-linkedin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="GitHub"
+         target="_blank"
+         href="https://github.com/drivendataorg">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-github"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+  <path d="M9 18c-4.51 2-5-2-7-2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="RSS" target="_blank" href="https://www.drivendata.co/feeds/all.atom.xml">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-rss"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>  </div>
+</a>
+    </li>
+  </ul>      </div>
+      <p class="text-lg/6 lg:mb-2">
+        Join our newsletter or follow us for the latest on our social impact
+        projects, data science competitions and open source work.
+      </p>
+    </div>
+    <div class="w-full flex flex-col items-end gap-4 lg:max-w-md">
+      <div class="w-full">
+<!-- Begin Brevo Form -->
+<style>
+    .sib-form,
+    .sib-form-block,
+    #sib-container,
+    .sib-input,
+    .sib-form-message-panel__text {
+        padding: 0 !important;
+    }
+
+    #sib-container {
+        background: transparent !important;
+    }
+
+    .sib-form-message-panel {
+        margin: 0 0 0.5rem 0 !important;
+    }
+
+    .sib-form input:focus,
+    .sib-form-block__button:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 2px #3b82f6 !important;
+    }
+
+    #sib-container input::placeholder {
+        color: currentColor;
+    }
+</style>
+<link rel="stylesheet"
+      href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+<div class="sib-form">
+  <div id="sib-form-container"
+       class="sib-form-container"
+       style="/* on submit, the page will scroll to above this padding */ padding-top: 1rem">
+    <div id="error-message"
+         class="sib-form-message-panel"
+         style="font-size:14px;
+                text-align:left;
+                font-family:Helvetica, sans-serif;
+                color:#661d1d;
+                background-color:#ffeded;
+                border-radius:6px;
+                border-color:#ff4949">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">There was a problem. Please try again.</span>
+      </div>
+    </div>
+    <div></div>
+    <div id="success-message"
+         class="sib-form-message-panel"
+         style="font-size:14px;
+                text-align:left;
+                font-family:Helvetica, sans-serif;
+                color:#085229;
+                background-color:#e7faf0;
+                border-radius:6px;
+                border-color:#13ce66">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">Subscribe successful!</span>
+      </div>
+    </div>
+
+    <div id="sib-container"
+         class="sib-container--large sib-container--vertical">
+      <form id="sib-form"
+            method="POST"
+            action="https://sibforms.com/serve/MUIFAL0aQLUucsz3yqesAdTDeRhPjjIWMkPo0MvsorIPZsPU0uDu-b4IO3BOIcEggD477kzth-g2-wm_4WYEo9E8KPkbYrija3Rpw_lBJ9c0vVjThJhx5ukJaGmiZmrH7zaRammIC6etJowU4WJ_-tAX9azZqZls-Yi4pk8gSKe4H5F9kl2vbJ2KKBg5XW-wWfiXTbYHRZnm6tec"
+            data-type="subscription">
+
+        <div style="position: relative; align-items: center; position: relative">
+          <div class="sib-input sib-form-block" style="width: 100%;">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="sr-only entry__label" for="EMAIL" data-required="*">Email</label>
+
+                <div class="entry__field" style="margin: 0; border: none;">
+                  <input class="input "
+                         type="text"
+                         id="EMAIL"
+                         name="EMAIL"
+                         autocomplete="off"
+                         placeholder="Your email"
+                         data-required="true"
+                         required
+                         style="border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border: none;
+                                border-radius: 6px;
+                                border: 1px solid #17344A;
+                                border-radius: 6px;
+                                width: 100%" />
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary"
+                     style="font-size:16px;
+                            color:#661d1d"></label>
+              <label class="entry__error entry__error--primary"></label>
+
+            </div>
+          </div>
+
+          <div class="sib-form-block" style="text-align: left">
+            <button class="sib-form-block__button sib-form-block__button-with-loader"
+                    style="font-size:16px;
+                           text-align:left;
+                           color:#FFFFFF;
+                           background-color:#17344A;
+                           border: none;
+                           border-radius: 0;
+                           display: flex;
+                           position: absolute;
+                           right: 0;
+                           top: 0;
+                           bottom: 0;
+                           height: 40px;
+                           border-top-right-radius: 6px;
+                           border-bottom-right-radius: 6px;
+                           z-index: 1"
+                    form="sib-form"
+                    type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                   viewBox="0 0 512 512">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <div class="g-recaptcha-v3"
+             data-sitekey="6Lc5OR0rAAAAAALUFx2-TDRRurRsxylpJHQPgMI3"
+             style="display: none"></div>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'en';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+    window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+    window.translation = {
+        common: {
+            selectedList: '{quantity} list selected',
+            selectedLists: '{quantity} lists selected',
+            selectedOption: '{quantity} selected',
+            selectedOptions: '{quantity} selected',
+        }
+    };
+
+    var AUTOHIDE = Boolean(0);
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<!-- End Brevo Form -->
+
+<!-- ReCAPTCHA -->
+<script defer
+        src="https://www.google.com/recaptcha/api.js?render=6Lc5OR0rAAAAAALUFx2-TDRRurRsxylpJHQPgMI3&hl=en"></script>
+<div class="text-xs mt-1">
+  Protected by reCAPTCHA. The Google
+  <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+  <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+</div>
+<style>
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
+</style>
+<!-- End ReCAPTCHA --></div>
+    </div>
+  </div>
+</section><div class="pt-10"></div>
+<section class="section-content">
+  <div class="bg-default text-white rounded p-10 lg:p-20 flex flex-col text-center items-center gap-10 justify-between">
+    <div class="max-w-5xl">
+      <h2 class="h2 text-inverse-accent font-display mb-5 text-balance">Work with us to build a better world</h2>
+      <p class="text-xl max-w-5xl mx-auto text-balance">
+        Learn more about how our team is bringing the transformative power of data science and AI to organizations tackling the world's biggest challenges.
+      </p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 max-w-md w-full">
+      <a href="/#contact" class="btn-inverse-primary text-lg grow">Contact us</a>
+      <a href="/" class="btn-inverse-outline-primary text-lg grow">Learn more
+        <span class="sr-only">about us</span>
+      </a>
+    </div>
+
+  </div>
+</section><div class="pt-10"></div>        </div>
+
+<footer class="bg-[#0C1A26] text-white py-20 flex flex-col items-center">
+  <div class="section-content grid gap-8 grid-cols-1 xl:grid-cols-[500px_1fr]">
+    <div class="max-w-md">
+      <a href="https://www.drivendata.co"
+         class="flex items-start max-w-100 w-full"
+         aria-label="DrivenData">  <div class="icon-svg flex w-full"
+>
+<svg enable-background="new 0 0 967.5 155.9" viewBox="0 0 967.5 155.9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="617.1313" x2="743.1313" xlink:href="#a" y1="8.5736" y2="8.5736"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="617.1313" x2="825.0314" xlink:href="#a" y1="36.2936" y2="36.2936"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="617.1313" x2="888.0314" xlink:href="#a" y1="64.0136" y2="64.0136"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="617.1313" x2="773.2313" xlink:href="#a" y1="91.7336" y2="91.7336"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="617.1313" x2="873.3314" xlink:href="#a" y1="119.4536" y2="119.4536"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="617.1313" x2="946.8314" xlink:href="#a" y1="147.1736" y2="147.1736"/><path d="m738.2 17.1h-121.1v-17h126z" fill="url(#b)"/><path d="m617.1 27.8h207.9v17h-207.9z" fill="url(#c)"/><path d="m883.1 72.5h-266v-17h270.9z" fill="url(#d)"/><path d="m773.2 100.2h-156.1v-17h152.6z" fill="url(#e)"/><path d="m869.1 128h-252v-17h256.2z" fill="url(#f)"/><path d="m946.8 155.7h-329.7v-17h325.5z" fill="url(#g)"/><g fill="#fff"><path d="m0 155.9v-155.9h60.7c7.1 0 21.2 3.1 30.1 17.7 6.7 10.8 8.5 28.1 8.5 53.8 0 30.8 0 66.3-23.9 80.2-6.4 3.7-14.3 4.2-21.6 4.2zm41.8-22.8c26 0 27.7-13.7 27.7-58.8 0-36.8-3.7-51.4-21.2-51.4h-19.2v110.2z"/><path d="m146.3 88.8v67.2h-29.1v-156h55.1c25.2 0 44.3 8.7 44.3 37.4 0 17-4.4 34.9-23.9 37.6v.4c17.3 2.3 22.5 13.3 22.5 28.3v6.7c0 13.1.4 38.9 6.2 42.6v2.9h-32c-2.9-8.1-3.1-22.2-3.1-32.6v-6.9c-.2-9.6 0-22.7-10-25.6-6.7-1.9-13.7-2.1-20.8-2.1h-3.9-5.3zm0-22.9h22.9c9.6-.6 17-6.9 17-22.5 0-17.5-7.3-20.4-18.3-20.6h-21.6z"/><path d="m237.2 155.9v-155.9h29.1v155.9z"/><path d="m355.5 0h31.2l-33.7 155.9h-38.9l-34.4-155.9h31.2l18.3 100c1.7 8.7 2.7 17.7 3.5 26.6.4 4.2 1.2 8.5 1.2 12.9h.4c0-4.4.8-8.7 1.2-12.9.8-8.9 1.9-17.9 3.5-26.6z"/><path d="m399.7 155.9v-155.9h81.9v22.9h-52.8v39.3h48.6v22.8h-48.6v48h52.8v22.9z"/><path d="m566.8 0h29.1v155.9h-30.4l-22.7-55.5c-7.7-18.5-13.9-37.4-20.8-62h-.4c1 12.9 2.3 28.7 3.1 44.5.8 15.6 1.5 31.2 1.5 43.7v29.3h-29.1v-155.9h30.1l22.7 56.8c7.5 18.1 13.7 36.6 20.8 62h.4c-1-14.1-2.1-29.3-2.9-44.3s-1.5-29.9-1.5-43.9v-30.6z"/><path d="m616.5 0h27.9c17.7 0 33.5 1 46.2 14.8 10.4 12.5 15 35.8 15 51.4 0 17.7.4 41.2-6 58-9.6 26.8-26.4 31.8-52.4 31.8h-30.6v-156zm13.6 143.9h16.2c7.7 0 16.8 0 23.9-3.3 20.8-9.6 21.8-43.9 21.8-62.8 0-19.8.4-50.9-20.2-62.2-8.1-4.4-20.8-4-30.1-3.5h-11.6z"/><path d="m766.6 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/><path d="m796.4 12.1v-12.1h84.2v12.1h-35.3v143.9h-13.5v-143.9z"/><path d="m925.7 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/></g></svg>  </div>
+</a>
+      <p class="text-lg/tight mt-4 text-pretty max-w-100">
+        We use data science & AI to help mission-driven
+        organizations offer more
+        impactful services
+      </p>
+
+    </div>
+    <div
+      class="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] w-full gap-10 [&_a]:!no-underline mt-10 xl:m-0">
+      <div class="order-1 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">About</h3>
+        <a class="opacity-70" href="/team/">Meet the team</a>
+        <a class="opacity-70" href="/#contact">Contact us</a>
+        <a class="opacity-70"
+           href="https://apply.workable.com/drivendata/"
+           target="_blank">Careers</a>
+        <a class="opacity-70" href="/#faq">FAQ</a>
+      </div>
+
+      <div class="order-3 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="/#services">Services</a>
+        </h3>
+          <a class="opacity-70" href="/#data-science-and-ai">Data science & AI</a>          <a class="opacity-70" href="/#software-engineering">Software engineering</a>          <a class="opacity-70" href="/#data-engineering">Data engineering</a>          <a class="opacity-70" href="/#data-strategy">Data strategy</a>      </div>
+
+      <div class="order-5 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">Open source</h3>
+        <a class="opacity-70"
+           href="https://cookiecutter-data-science.drivendata.org/"
+           target="_blank">Cookiecutter Data Science</a>
+        <a class="opacity-70"
+           href="https://deon.drivendata.org/"
+           target="_blank">Deon: Ethics checklist</a>
+        <a class="opacity-70"
+           href="https://zamba.drivendata.org/"
+           target="_blank">Zamba: Wildlife monitoring</a>
+        <a class="opacity-70"
+           href="https://github.com/drivendataorg/competition-winners"
+           target="_blank">Models from competitions</a>
+        <a class="opacity-70" href="/open-source/">All open source projects</a>
+      </div>
+
+      <div class="order-2 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">Resources</h3>
+        <a class="opacity-70" href="/blog/">Blog</a>
+        <a class="opacity-70" href="/projects/">Projects</a>
+        <a class="opacity-70" href="/insights/">Insights</a>
+        <a class="opacity-70" href="/case-studies/">Case studies</a>
+      </div>
+
+      <div class="order-4 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="https://www.drivendata.org/" target="_blank">Competitions</a>
+        </h3>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitions/"
+           target="_blank">Join a competition</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/partners/"
+           target="_blank">Run a competition</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitors/"
+           target="_blank">How competitions work</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitions/search/"
+           target="_blank">Past competitions</a>
+      </div>
+
+      <div class="order-6 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="/government/" target="_blank">Government</a>
+        </h3>
+        <a class="opacity-70" href="/government/">Contract Vehicles</a>
+        <a class="opacity-70" href="/government/DrivenData, Inc - Capability Statement - Federal (2025).pdf">
+          Capability Statement
+        </a>
+      </div>
+
+    </div>
+    <div class="text-2xl flex flex-col gap-1 xl:justify-between mt-10 xl:mt-20">
+      <div class="-ml-1.5 "><ul class="flex items-center">
+  <li>
+    <a aria-label="X"
+       target="_blank"
+       href="https://x.com/drivendataorg">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.9012 2H22L15.2286 9.74043L23.1931 22H16.9564L12.0722 14.5628L5.56339 22H2.46243L9.70639 13.7227L2.06445 2H8.46051L12.8753 8.79829L18.9012 2ZM17.8136 20.0321H19.5307L7.52752 3.86474H5.68547L17.8136 20.0321Z"
+                fill="currentColor" />
+        </svg>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a aria-label="Bluesky" target="_blank" href="https://bsky.app/profile/drivendata.org">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.33526 3.34625C8.62822 5.30132 11.0945 9.26541 12.0001 11.3928C12.9056 9.26556 15.3718 5.30128 17.6649 3.34625C19.3193 1.93554 22 0.844017 22 4.3173C22 5.01097 21.6498 10.1444 21.4444 10.9778C20.7306 13.8753 18.1292 14.6143 15.8152 14.167C19.86 14.9489 20.8889 17.5387 18.6668 20.1285C14.4465 25.047 12.601 18.8944 12.1278 17.3179C12.0412 17.0289 12.0006 16.8937 12 17.0086C11.9994 16.8937 11.9588 17.0289 11.8721 17.3179C11.3993 18.8944 9.55378 25.0472 5.33322 20.1285C3.11103 17.5387 4.13995 14.9487 8.18483 14.167C5.87077 14.6143 3.26934 13.8753 2.55555 10.9778C2.35016 10.1443 2 5.01089 2 4.3173C2 0.844017 4.68074 1.93554 6.33515 3.34625H6.33526Z" stroke="black" style="stroke:currentColor;" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </span></a>
+    </li>
+    <li>
+      <a aria-label="LinkedIn"
+         target="_blank"
+         href="https://www.linkedin.com/company/9202422/">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-linkedin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="GitHub"
+         target="_blank"
+         href="https://github.com/drivendataorg">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-github"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+  <path d="M9 18c-4.51 2-5-2-7-2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="RSS" target="_blank" href="https://www.drivendata.co/feeds/all.atom.xml">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-rss"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>  </div>
+</a>
+    </li>
+  </ul></div>
+      <p class="text-base/5">
+        <a class="font-bold" href="/#subscribe">Subscribe to our newsletter</a>
+        <span class="opacity-70 hidden xl:inline-block">or follow us for updates!</span>
+      </p>
+    </div>
+
+    <div class="order-6 xl:order-none flex self-end -mb-1 xl:text-right xl:justify-end">
+      <div>
+
+        <div class="opacity-70">
+          <a href="mailto:info@drivendata.org" target="_blank">info@drivendata.org</a>
+          <br class="block"/>
+          &copy; 2026 DrivenData LLC,
+          <br class="block xl:hidden"/>
+          700 Colorado Blvd #611,
+          <br class="block xl:hidden"/>
+          Denver, CO 80206
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+        <script>
+            // Automatically expand a <details> accordian if you visit its anchor link e.g. expand <details id="service"> when you visit URL `/#service`
+            function openDetailsMatchingHashLink() {
+                const hashLink = window.location.hash;
+
+                if (!hashLink) return;
+
+                const elDetails = document.querySelector(hashLink);
+                if (elDetails?.tagName?.toLowerCase() === "details") {
+                    elDetails.open = true;
+                }
+            }
+            document.addEventListener("DOMContentLoaded", openDetailsMatchingHashLink);
+            window.addEventListener("hashchange", openDetailsMatchingHashLink);
+
+            // e.g. opening <details id="service"> will save #service to the location bar so it's easier to copy/share the link 
+            function saveAnchorTagWhenOpeningDetails() {
+                document.querySelectorAll('details[id]').forEach(details => {
+                    details.addEventListener('toggle', () => {
+                        if (details.open) {
+                            history.replaceState(null, '', `#${details.id}`);
+                        }
+                    });
+                });
+            }
+            saveAnchorTagWhenOpeningDetails();
+        </script>
+
+        <script>
+            function initCardScrollerButtons() {
+                document.querySelectorAll("[data-scroll-direction]").forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const section = button.closest("section");
+                        const container = section.querySelector("[data-scroll-container]");
+
+                        const cardStyles = getComputedStyle(container.children[0].children[0]);
+                        const cardGap = parseFloat(cardStyles.columnGap || cardStyles.gap || 0);
+                        const cardWidth = container.children[0].children[0].children[1].offsetWidth + cardGap;
+
+                        const containerVisibleWidth = container.clientWidth;
+                        const containerFullWidth = container.scrollWidth;
+                        const currentCardScrollX = Math.floor(container.scrollLeft / cardWidth) * cardWidth;
+
+                        const isAtScrollStart = currentCardScrollX - cardWidth < 0;
+                        const isAtScrollEnd = container.scrollLeft + containerVisibleWidth >= containerFullWidth;
+
+                        const scrollForwardX = isAtScrollEnd ? 0 : currentCardScrollX + cardWidth;
+                        const scrollBackwardX = isAtScrollStart ? containerFullWidth : currentCardScrollX - cardWidth;
+
+                        const isScrollingForward = button.dataset.scrollDirection === "next";
+                        const newScrollX = isScrollingForward ? scrollForwardX : scrollBackwardX;
+
+                        container.scrollTo({
+                            left: newScrollX,
+                            behavior: "smooth",
+                        });
+                    }, {
+                        passive: true
+                    });
+                });
+            }
+            document.addEventListener("DOMContentLoaded", initCardScrollerButtons);
+        </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-89F370DQLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-89F370DQLF');
+  </script>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23393052.js"></script>
+    </body>
+</html>

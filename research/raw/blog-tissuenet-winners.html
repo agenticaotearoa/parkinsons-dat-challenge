@@ -1,0 +1,2081 @@
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" class="scroll-smooth">
+    <head>
+        <link rel="preload"
+              href="/theme/fonts/nunito-sans/nunito-sans-v18-latin-regular.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="/theme/fonts/nunito-sans/nunito-sans-v18-latin-700.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="/theme/fonts/exo-2/exo-2-v25-latin-300.woff2"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+
+        <link rel="stylesheet" href="/dist/css/main.css">
+
+        <title>
+Meet the winners of TissueNet: Detect Lesions in Cervical Biopsies - DrivenData        </title>
+        <!-- Using the latest rendering mode for IE -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+              content="DrivenData helps mission-driven organizations harness their data to work smarter and offer more impactful services using data science, machine learning, and AI.">
+
+<link href="/images/favicon.ico" type="image/x-icon" rel="icon">
+            <meta property="og:site_name" content="DrivenData" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="Meet the winners of TissueNet: Detect Lesions in Cervical Biopsies" />
+                <meta property="og:url" content="https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners" />
+                <meta property="og:description"
+                      content="Hear from the winners who were best able to diagnose whole slide images of cervical biopsies using computer vision." />
+                <meta property="article:published_time"
+                      content="2020-12-01" />
+<meta property="article:section" content="blog" /><meta property="article:tag" content="winners" /><meta property="article:tag" content="competition" /><meta property="article:tag" content="health" /><meta property="article:author" content="Robert Gibboni" />            <meta property="og:image" content="https://www.drivendata.co/images/tissuenet-banner.jpg" />
+
+            <link href="https://www.drivendata.co/feeds/all.atom.xml"
+                  type="application/atom+xml"
+                  rel="alternate"
+                  title="DrivenData ATOM Feed" />
+
+<style>
+.codehilite .hll { background-color: #ffffcc }
+.codehilite  { background: #f8f8f8; }
+.codehilite .c { color: #408080; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #FF0000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #00A000 } /* Generic.Inserted */
+.codehilite .go { color: #888888 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #7D9029 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #A0A000 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+    /*max-width: 2ex;*/
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*
+ *   BLOG POST READABILITY STYLES
+ */
+table{
+  border-collapse: collapse;
+}
+
+.input_prompt, .output_prompt, .prompt{
+  display: none;
+}
+.output_subarea{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.entry-content {
+  max-width: 90rem;
+}
+
+article figcaption{
+  margin: 0 10%;
+}
+
+.output_area img {
+  min-width: 75%;
+  max-width: 100%;
+}
+
+/* Have long code cells overflow horizontally with scrollbars */
+.inner_cell .input_area pre {
+  white-space: pre;    /* keep each line intact ─ no wrapping            */
+  overflow-x: auto;    /* show a horizontal scrollbar when it’s needed   */
+}</style>
+
+
+
+    </head>
+    <body data-page-type="blog" class="">
+
+<nav class="group p-0 lg:p-5 "
+     aria-label="Main navigation">
+  <div class="bg-default px-2 py-5 lg:p-5 lg:rounded max-w-[1440px] mx-auto md:flex items-center">
+
+    <div class="flex">
+      <a href="https://www.drivendata.co"
+         title="Home"
+         class="-m-5 p-5 flex items-start shrink">
+          <div class="icon-svg h-6 lg:h-6"
+>
+<svg enable-background="new 0 0 967.5 155.9" viewBox="0 0 967.5 155.9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="617.1313" x2="743.1313" xlink:href="#a" y1="8.5736" y2="8.5736"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="617.1313" x2="825.0314" xlink:href="#a" y1="36.2936" y2="36.2936"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="617.1313" x2="888.0314" xlink:href="#a" y1="64.0136" y2="64.0136"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="617.1313" x2="773.2313" xlink:href="#a" y1="91.7336" y2="91.7336"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="617.1313" x2="873.3314" xlink:href="#a" y1="119.4536" y2="119.4536"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="617.1313" x2="946.8314" xlink:href="#a" y1="147.1736" y2="147.1736"/><path d="m738.2 17.1h-121.1v-17h126z" fill="url(#b)"/><path d="m617.1 27.8h207.9v17h-207.9z" fill="url(#c)"/><path d="m883.1 72.5h-266v-17h270.9z" fill="url(#d)"/><path d="m773.2 100.2h-156.1v-17h152.6z" fill="url(#e)"/><path d="m869.1 128h-252v-17h256.2z" fill="url(#f)"/><path d="m946.8 155.7h-329.7v-17h325.5z" fill="url(#g)"/><g fill="#fff"><path d="m0 155.9v-155.9h60.7c7.1 0 21.2 3.1 30.1 17.7 6.7 10.8 8.5 28.1 8.5 53.8 0 30.8 0 66.3-23.9 80.2-6.4 3.7-14.3 4.2-21.6 4.2zm41.8-22.8c26 0 27.7-13.7 27.7-58.8 0-36.8-3.7-51.4-21.2-51.4h-19.2v110.2z"/><path d="m146.3 88.8v67.2h-29.1v-156h55.1c25.2 0 44.3 8.7 44.3 37.4 0 17-4.4 34.9-23.9 37.6v.4c17.3 2.3 22.5 13.3 22.5 28.3v6.7c0 13.1.4 38.9 6.2 42.6v2.9h-32c-2.9-8.1-3.1-22.2-3.1-32.6v-6.9c-.2-9.6 0-22.7-10-25.6-6.7-1.9-13.7-2.1-20.8-2.1h-3.9-5.3zm0-22.9h22.9c9.6-.6 17-6.9 17-22.5 0-17.5-7.3-20.4-18.3-20.6h-21.6z"/><path d="m237.2 155.9v-155.9h29.1v155.9z"/><path d="m355.5 0h31.2l-33.7 155.9h-38.9l-34.4-155.9h31.2l18.3 100c1.7 8.7 2.7 17.7 3.5 26.6.4 4.2 1.2 8.5 1.2 12.9h.4c0-4.4.8-8.7 1.2-12.9.8-8.9 1.9-17.9 3.5-26.6z"/><path d="m399.7 155.9v-155.9h81.9v22.9h-52.8v39.3h48.6v22.8h-48.6v48h52.8v22.9z"/><path d="m566.8 0h29.1v155.9h-30.4l-22.7-55.5c-7.7-18.5-13.9-37.4-20.8-62h-.4c1 12.9 2.3 28.7 3.1 44.5.8 15.6 1.5 31.2 1.5 43.7v29.3h-29.1v-155.9h30.1l22.7 56.8c7.5 18.1 13.7 36.6 20.8 62h.4c-1-14.1-2.1-29.3-2.9-44.3s-1.5-29.9-1.5-43.9v-30.6z"/><path d="m616.5 0h27.9c17.7 0 33.5 1 46.2 14.8 10.4 12.5 15 35.8 15 51.4 0 17.7.4 41.2-6 58-9.6 26.8-26.4 31.8-52.4 31.8h-30.6v-156zm13.6 143.9h16.2c7.7 0 16.8 0 23.9-3.3 20.8-9.6 21.8-43.9 21.8-62.8 0-19.8.4-50.9-20.2-62.2-8.1-4.4-20.8-4-30.1-3.5h-11.6z"/><path d="m766.6 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/><path d="m796.4 12.1v-12.1h84.2v12.1h-35.3v143.9h-13.5v-143.9z"/><path d="m925.7 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/></g></svg>  </div>
+
+      </a>
+    </div>
+    <button class="flex md:hidden absolute top-5 right-2 text-white"
+      aria-expanded="false"
+      onclick="toggleMenu()"
+      ">
+      <div aria-label="Open menu">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-menu"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <line x1="4" x2="20" y1="12" y2="12" />
+  <line x1="4" x2="20" y1="6" y2="6" />
+  <line x1="4" x2="20" y1="18" y2="18" />
+</svg>  </div>
+</div>
+      <div aria-label="Close menu" class="hidden">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 6 6 18" />
+  <path d="m6 6 12 12" />
+</svg>  </div>
+</div>
+    </button>
+
+    <div class="hidden group-data-open:flex md:block! w-full md:ms-8">
+      <ul class="pt-7 md:pt-0 flex flex-col md:flex-row items-start gap-5 md:gap-4 lg:gap-8 md:items-center w-full">
+
+        <li class="md:hidden xl:block">  <a href="https://www.drivendata.co/#services"
+     class="nav-header-link"
+>Services</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/projects/"
+     class="nav-header-link"
+>Projects</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/open-source/"
+     class="nav-header-link"
+>Open source</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/government/"
+     class="nav-header-link"
+>Government</a>
+</li>
+
+        <li class="grow">
+          <a href="https://www.drivendata.org"
+             target="_blank"
+             class="inline-block nav-header-link">Competitions   <div class="icon-svg icon-xs"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>  </div>
+</a>
+        </li>
+        <li>  <a href="https://www.drivendata.co/blog/"
+     class="nav-header-link"
+aria-current="page">Blog</a>
+</li>
+        <li>  <a href="https://www.drivendata.co/insights/"
+     class="nav-header-link"
+>Insights</a>
+</li>
+        <li class="md:hidden xl:block">  <a href="https://www.drivendata.co/team/"
+     class="nav-header-link"
+>About</a>
+</li>
+        <li>
+          <a href="https://www.drivendata.co#contact"
+             class="btn-inverse-outline-primary px-10 md:px-5 py-1 font-normal">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+    let isNavOpen = false;
+
+    function toggleMenu() {
+        const elNav = document.querySelector('nav[aria-label="Main navigation"]');
+        const elMenuButton = elNav.querySelector('button[aria-expanded]');
+
+        isNavOpen = !isNavOpen;
+
+        elNav.toggleAttribute('data-open', isNavOpen);
+        elMenuButton.setAttribute('aria-expanded', isNavOpen ? 'true' : 'false');
+
+        Array.from(elMenuButton.children).forEach(child => child.classList.toggle('hidden'));
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isNavOpen) {
+            toggleMenu();
+        }
+    });
+</script>
+        <div id="mainContainer">
+
+    <header class="section-content">
+        <div>
+            <div class="pt-10"></div>
+            <div>
+
+                <div class="pt-7"></div>
+                <div class="flex flex-wrap gap-x-4 gap-y-2 items-center">
+                    <a href="https://www.drivendata.co/blog/"
+                       class="flex gap-2 category items-center">blog</a>
+
+<a href="/tag/winners/" class="category">winners</a><a href="/tag/competition/" class="category">competition</a>
+                    <div class="text-muted text-sm">
+                        <time datetime="2020-12-01T00:00:00-05:00"> 1 Dec 2020</time>
+                    </div>
+                </div>
+                <div class="pt-7"></div>
+                <div class="">
+                    <div class="">
+                        <h1 class="h2 tracking-tight font-display">Meet the winners of TissueNet: Detect Lesions in Cervical Biopsies</h1>
+                        <div class="pt-4"></div>
+                        <div class="text-muted [&>*]:!text-xl"><p>Hear from the winners who were best able to diagnose whole slide images of cervical biopsies using computer vision.</p></div>
+                    </div>
+                </div>
+                <div class="pt-6"></div>
+                <div class="grid grid-cols-[repeat(1,max-content)] sm:grid-cols-[repeat(2,max-content)] md:grid-cols-[repeat(3,max-content)] lg:grid-cols-[repeat(4,max-content)] xl:grid-cols-[repeat(5,max-content)] gap-x-10 gap-y-4 items-center">
+
+
+                            <div class="flex gap-2 items-center">
+                                <div class="avatar size-14">
+                                        <img alt=""
+                                             src="/images/robert.png"
+                                             class="bg-placeholder">
+                                </div>
+                                <div class="text-sm">
+                                        <a href="https://www.drivendata.co/team/#robert-gibboni" class=" font-bold">Robert Gibboni</a>
+                                        <div class="text-muted">Lead Data Scientist</div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="pt-15"></div>
+
+    <section id="content" class="section-content">
+        <div class="flex gap-10 flex-row-reverse items-start">
+            <div class="grow sticky top-0 pt-5 -mt-5 hidden lg:flex flex-col gap-10 w-sm">
+                    <nav aria-label="Table of contents">
+                        <h2 class="text-lg font-bold mb-2">On this page</h2>
+                        <div class="toc"><h2><a href="#tissuenet-detect-lesions-in-cervical-biopsies">TissueNet: Detect Lesions in Cervical Biopsies</a></h2><h2><a href="#meet-the-winners">Meet the winners</a></h2><h3><a href="#brice-tayart-capucine-bertrand-solene-chan-lang-saima-ben-hadj-and-tina-rey">Brice Tayart, Capucine Bertrand, Solène Chan Lang, Saïma Ben Hadj, and Tina Rey</a></h3><h3><a href="#raphael-kiminya">Raphael Kiminya</a></h3><h3><a href="#kirill-brodt">Kirill Brodt</a></h3><h3><a href="#ming-feng-kele-xu-tingzhen-li">Ming Feng, Kele Xu, Tingzhen Li</a></h3></div>
+                    </nav>
+                <aside>
+                    <h2 class="text-base font-bold mb-2">Share this page</h2>
+                    <div>
+  <ul class="flex gap-1">
+    <li>
+      <a aria-label="Share via Email"
+         target="_blank"
+         class="text-primary border-1 border-border-weak rounded flex p-2"
+         href="mailto:?subject=Meet%20the%20winners%20of%20TissueNet%3A%20Detect%20Lesions%20in%20Cervical%20Biopsies&body=https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-mail"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="20" height="16" x="2" y="4" rx="2" />
+  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="Share to x.com"
+         target="_blank"
+         class="text-primary border-1 border-border-weak rounded flex p-2"
+         href="https://x.com/intent/tweet?url=https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners&text=Meet%20the%20winners%20of%20TissueNet%3A%20Detect%20Lesions%20in%20Cervical%20Biopsies">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-twitter"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="Share to Bluesky"
+         target="_blank"
+         class="text-primary border-1 border-border-weak rounded flex p-2"
+         href="https://bsky.app/intent/compose?text=https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners">
+        <div class="icon-svg">
+          <svg width="24"
+               height="24"
+               viewBox="0 0 24 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.33526 3.34625C8.62822 5.30132 11.0945 9.26541 12.0001 11.3928C12.9056 9.26556 15.3718 5.30128 17.6649 3.34625C19.3193 1.93554 22 0.844017 22 4.3173C22 5.01097 21.6498 10.1444 21.4444 10.9778C20.7306 13.8753 18.1292 14.6143 15.8152 14.167C19.86 14.9489 20.8889 17.5387 18.6668 20.1285C14.4465 25.047 12.601 18.8944 12.1278 17.3179C12.0412 17.0289 12.0006 16.8937 12 17.0086C11.9994 16.8937 11.9588 17.0289 11.8721 17.3179C11.3993 18.8944 9.55378 25.0472 5.33322 20.1285C3.11103 17.5387 4.13995 14.9487 8.18483 14.167C5.87077 14.6143 3.26934 13.8753 2.55555 10.9778C2.35016 10.1443 2 5.01089 2 4.3173C2 0.844017 4.68074 1.93554 6.33515 3.34625H6.33526Z" stroke="black" style="stroke:currentColor;" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a aria-label="Share to LinkedIn"
+         target="_blank"
+         class="text-primary border-1 border-border-weak rounded flex p-2"
+         href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners&title=Meet%20the%20winners%20of%20TissueNet%3A%20Detect%20Lesions%20in%20Cervical%20Biopsies">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-linkedin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="Share to Facebook"
+         target="_blank"
+         class="text-primary border-1 border-border-weak rounded flex p-2"
+         href="https://www.facebook.com/sharer/sharer.php?u=https://www.drivendata.co/blog/tissuenet-cervical-biopsies-winners">  <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-facebook"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+</svg>  </div>
+</a>
+    </li>
+  </ul>
+</div>
+                </aside>
+            </div>
+
+            <article class="min-w-0 w-full">
+
+                <div>
+                    <div class="prose"><h2 id="tissuenet-detect-lesions-in-cervical-biopsies">TissueNet: Detect Lesions in Cervical Biopsies<a class="headerlink" href="#tissuenet-detect-lesions-in-cervical-biopsies" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>The French Society of Pathology and the Health Data Hub are very enthusiastic about the data challenge results! They show that AI will sooner or later be part of the tools that pathologists use on a daily basis. Of course, there is still a lot to do to validate these approaches in the professional environment. This data challenge on epithelial uterine cervix lesions along with data challenges for other pathology domains paves the way for another set of challenges, the true life validation challenges.</p>
+<p><cite>Dr. Philippe Bertheau, President of the French Society of Pathology</cite></p>
+</blockquote>
+<p>A biopsy is a sample of tissue examined at a microscopic level to diagnose cancer or signs of pre-cancer. While most diagnoses are still made with photonic microscopes, digital pathology has developed considerably over the past decade as it has become possible to digitize slides into "virtual slides" or "whole slide images" (WSIs). <strong>These heavy image files contain all the information required to diagnose lesions as malignant or benign.</strong></p>
+<p>Making this diagnosis is no easy task. It requires specialized training and careful examination of microscopic tissue. Approaches in machine learning are already able to help analyze WSIs by measuring or counting areas of the image under a pathologist's supervision. In addition, computer vision has shown some potential to classify tumor subtypes, and in time may offer a powerful tool to aid pathologists in making the most accurate diagnoses.</p>
+<p>This challenge focuses on epithelial lesions of the uterine cervix and features a unique collection of thousands of WSIs collected from medical centers across France. The lesions in slides like these are most often benign (class 0), but others have low malignant potential (class 1) or high malignant potential (class 2), and others may already be invasive cancers (class 3). The objective of this <a href="https://www.drivendata.org/competitions/67/competition-cervical-biopsy/">competition</a> was to detect the most severe epithelial lesions of the uterine cervix present in these biopsy images.</p>
+<p>One of the interesting challenges for this competition was to design a metric that expressed how pathologists think about the risks of different types of misclassifications. We know that it is worse to mistake normal tissue for high malignant potential (class 2) tissue than to mistake it for low malignant potential (class 1) tissue―but how much worse? Our partners at the French Society of Pathology worked with domain experts to arrive at a consensus about how to quantify these intuitions. (Mistaking a class 0 lesion for a class 2 lesion is <em>7x worse</em> than mistaking it for a class 1 lesion.) The competition used this quantitative consensus to evaluate all submissions and select the winners. (Read more about the custom metric in the competition's <a href="https://www.drivendata.org/competitions/67/competition-cervical-biopsy/page/255/">Problem description</a>.)</p>
+<p>This custom metric can also help us define higher risk "non-adjacent" mistakes as those misclassifications that are more than one class away from the true class. <strong>By this definition, the top 3 submissions make non-adjacent mistakes on <em>less than 2%</em> of the 1,500+ slide test set!</strong> The figure below shows how the top four models performed on a few metrics.</p>
+<p><img alt="Performance barplots" src="/images/sfp-performance-barplots.png" /></p>
+<p>For a more granular look at the performance of the top two models, we can look at the confusion matrices. Each cell shows the percent of slides with the true label for that row that were predicted to have the label for that column.</p>
+<p><img alt="Confusion matrices" src="/images/sfp-confusion-matrices.png" /></p>
+<p>All the prize-winning solutions from this competition are linked below and made available for anyone to use and learn from. ** Meet the winners and learn how they built their models! **</p>
+<hr />
+<h2 id="meet-the-winners">Meet the winners<a class="headerlink" href="#meet-the-winners" title="Permanent link">&para;</a></h2>
+<h3 id="brice-tayart-capucine-bertrand-solene-chan-lang-saima-ben-hadj-and-tina-rey">Brice Tayart, Capucine Bertrand, Solène Chan Lang, Saïma Ben Hadj, and Tina Rey<a class="headerlink" href="#brice-tayart-capucine-bertrand-solene-chan-lang-saima-ben-hadj-and-tina-rey" title="Permanent link">&para;</a></h3>
+<p><em>Note: Cash prizes were awarded to the teams that shared their solutions under an open source license, but willingness to share solutions did not impact leaderboard positions. This team achieved the highest score and declined the prize.</em></p>
+<p><img src="/images/sfp-1st.png" style="height:175px"></p>
+<p><strong>Place</strong>: 1st</p>
+<p><strong>Hometown</strong>: Paris, France</p>
+<p><strong>Team</strong>: Tribvn-Healthcare</p>
+<p><strong>Username</strong>: <a href="https://www.drivendata.org/users/brice_tayart/">brice_tayart</a></p>
+<p><strong>Background</strong>:</p>
+<p>Brice Tayart: I recently completed a Masters degree in AI and work as data scientist at Tribvn Healthcare, a company specialized in histopathological image analysis. I have an interest in both Computer Vision and the health domain, so I’m happy with that!</p>
+<p>Prior to that, I worked for 13 years in the geophysical industry, alternatively attending field operations abroad and developing advanced noise filtering algorithms for seismic records, in Matlab and C. The combination sometime gives surprising results, e.g. write a distributed inversion code, then deploy it on a cluster set-up in a backyard shack in Moroccan countryside.</p>
+<p>Even though they did not register an account on Driven Data, other members of Tribvn Healthcare IA team assisted in the project, tested some options and contributed though their experience and advice. The team consists in Capucine Bertrand, Saïma Ben Hadj, Solène Chan Lang and especially Tina Rey who trained some of the models which made into the final ensemble. We also had some discussions with pathologists and medical image analysis specialists.</p>
+<p><strong>What motivated you to compete in this challenge?</strong></p>
+<p>I competed on behalf of Tribvn Healthcare. Personally, I was very interesting in this challenge, as it was a great opportunity to demonstrate skills, gather experience on an exciting dataset and hopefully benefit to patients some day in the future.</p>
+<p><strong>Summary of approach</strong>:</p>
+<p>The inference process is packed into a parallelized pipeline, so that costly operations that can be deferred to the CPU run in the background while the GPU is busy with the segmentation―e.g. tissue detection or reading and decoding the tiff files.</p>
+<div align="center">
+<img src="/images/sfp-1st-diagram.png" style="height:300px">
+<p><em>Inference pipeline</em></p>
+</div>
+
+<ol>
+<li>Tissue detection: With a combination of filters that detect the white background, blurry areas, or some obvious artefacts like black stripes, a mask of the tissue areas is computed. On some slides, these regions of interest (ROI) represents only a very small part of the image.</li>
+<li>Building a dataset and training a DenseNet: The goal is to teach a CNN to classify patches extracted from the whole slide image.</li>
+<li>Segmentation and aggregation: The model of step 2 is applied on a sliding window over the ROIs, which gives a segmentation of the tissue. These segmentation maps however contain from less than 10 to several thousand valid data points and are not readily usable. For each class, we look at the distribution of probabilities and a small, fixed number of statistics is computed. All the statistics are concatenated into a feature vector that describes the whole slide image.</li>
+<li>Label prediction: A linear SVM is trained with a K-fold on the validation slides―since the feature vectors on the training set may not be representative of general data due to segmentation model overfitting. The SVM is used to predict the label of the slides as a probability distribution over the 4 classes. Given this distribution and the reward matrix, the average reward expected upon predicting each of the 4 labels is computed. The prediction that gives the highest expected score is picked.</li>
+</ol>
+<h3 id="raphael-kiminya">Raphael Kiminya<a class="headerlink" href="#raphael-kiminya" title="Permanent link">&para;</a></h3>
+<p><img src="/images/sfp-2nd.jpg" style="height:300px"></p>
+<p><strong>Place</strong>: 2nd</p>
+<p><strong>Prize</strong>: €12,000</p>
+<p><strong>Hometown</strong>: Meru, Kenya</p>
+<p><strong>Username</strong>: <a href="https://www.drivendata.org/users/karelds/">karelds</a></p>
+<p><strong>Background</strong>:</p>
+<p>I’m a Business Intelligence/ Data Warehouse developer.</p>
+<p><strong>What motivated you to compete in this challenge?</strong></p>
+<p>I enjoy working on data science contests, especially where there is a visible positive social impact.</p>
+<p><strong>Summary of approach</strong>:</p>
+<p>I applied a Multiple Instance Learning approach, where each slide was subdivided into smaller parts that were individually processed. I used <a href="https://developer.ibm.com/articles/an-automatic-method-to-identify-tissues-from-big-whole-slide-images-pt1/">this method</a>​ to extract useful tissue parts (tiles) from the whole slide images. Using ​page ​5 to mask the informative tissue pixels, I generated six datasets with different tile sizes from the 2nd, 3rd and 4th ​pages ​of the pyramidal TIF files. This was both to increase the dataset and improve generalization by training a different model for each dataset. Tiles were ranked by their usefulness in classifying the slide, based on the scoring formula discussed in the above article.</p>
+<p>During training, the best ​N ​tiles for each slide were selected and passed through a Convolutional Neural Network to extract feature vectors. The output features were then aggregated for each slide and pooling and classification was done on the slide level.</p>
+<p>Some slides had hundreds of tiles with potentially useful tissue, but I could only fit so many tiles in memory with a reasonably batch size. To allow the model to ​see​ as much useful data as possible, I randomly sampled the ​N ​tiles from the top ​N_MAX ​tiles each epoch (see ​<a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/blob/main/2nd%20Place/code/config.csv">config.csv</a>​ file). This also doubled as regularization, further enhancing the model’s generalization.</p>
+<div align="center">
+<img src="/images/sfp-2nd-diagram.png" style="height:500px">
+<p><em>Tile extraction to slide classification</em></p>
+</div>
+
+<p>Check out <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/tree/main/2nd%20Place">karelds's full write-up and solution</a> in the <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies">competition repo</a>.</p>
+<h3 id="kirill-brodt">Kirill Brodt<a class="headerlink" href="#kirill-brodt" title="Permanent link">&para;</a></h3>
+<p><img src="/images/sfp-3rd.jpg" style="height:300px"></p>
+<p><strong>Place</strong>: 3</p>
+<p><strong>Prize</strong>: €8,000</p>
+<p><strong>Hometown</strong>: Almaty, Kazakhstan</p>
+<p><strong>Username</strong>: <a href="https://www.drivendata.org/users/kbrodt/">kbrodt</a></p>
+<p><strong>Background</strong>:</p>
+<p>Currently, I'm doing research at the University of Montréal in Computer Graphics, using Machine Learning for problem-solving: Learning-based Posing of 3D Characters via Bitmap Sketches. I got my Master's in Mathematics at Novosibirsk State University, Russia. Lately, I fell in love with machine learning, so I was enrolled in the Yandex School of Data Analysis and Computer Science Center. This led me to develop and teach the first open Deep Learning course in Russian. Machine Learning is my passion and I often take part in competitions.</p>
+<p><strong>What motivated you to compete in this challenge?</strong></p>
+<p>I become addicted to machine learning contests. The interesting part of this challenge are extremely high resolution images and ordinal labels. I also hope it advances medical research.</p>
+<p><strong>Summary of approach</strong>:</p>
+<p>The main challenge here is to work with extremely high-resolution images (e.g. 150,000 x 85,000 pixels). One can reduce the resolution by downsampling them to reasonable sizes, such that a deep neural network (DNN) could work with them but it hurts the performance. On the one hand, we need quite large images with sufficient information. On the other hand, we should be able to pass them into DNN as an input.</p>
+<p>One can notice that most of the image has a monotone background (usually white). The simple method to reduce the size is to select the tiles/crops based on the number of tissue pixels. First, divide the image into N x N grid. Calculate the sum or mean of pixels' intensity and then stack top K tiles/crops into one image.</p>
+<p>Check out <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/tree/main/3rd%20Place">kbrodt's full write-up and solution</a> in the <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/">competition repo</a>.</p>
+<h3 id="ming-feng-kele-xu-tingzhen-li">Ming Feng, Kele Xu, Tingzhen Li<a class="headerlink" href="#ming-feng-kele-xu-tingzhen-li" title="Permanent link">&para;</a></h3>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <img src="/images/sfp-4th-feng.jpg" style="height:300px">
+      </td>
+      <td>
+        <img src="/images/sfp-4th-xu.jpg" style="height:300px">
+      </td>
+      <td>
+        <img src="/images/sfp-4th-li.jpg" style="height:300px">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Place</strong>: 4th</p>
+<p><strong>Prize</strong>: €5,000</p>
+<p><strong>Hometowns</strong>: Shandong, Changsha and Jiangxi, China</p>
+<p><strong>Team</strong>: LifeIs2Short</p>
+<p><strong>Usernames</strong>: <a href="https://www.drivendata.org/users/AndrewTal/">AndrewTal</a>, <a href="https://www.drivendata.org/users/debut_kele/">debut_kele</a>, and <a href="https://www.drivendata.org/users/amelie/">amelie</a></p>
+<p><strong>Background</strong>:</p>
+<p>Ming Feng received his bachelor degree from Ningxia University, Ningxia, China, in July 2018. Currently he is a Ph.D. student at Tongji University, Shanghai, China. His current research interests include medical image processing and weakly supervised learning.</p>
+<p>Kele Xu received his Ph.D. degree from Université Pierre et Marie CURIE, Paris, France, in December 2016. Currently he is an assistant professor at National University of Defense Technology, Changsha, China. His current research interests include applied machine learning, silent speech interface (SSI) and multi-modal machine learning. He is also interested in the applications of machine learning for audio signal processing, time series analysis and medical image processing.</p>
+<p>Li Tingzhen received her bachelor degree from Xiamen University, Xiamen, China, in July 2019. Currently, she is a graduate student at Tongji University, Shanghai, China. Her current research interests include handwriting recognition and medical image classification.</p>
+<p><strong>What motivated you to compete in this challenge?</strong></p>
+<p>The TissueNet competition provides very precious data. I want to explore the boundaries of my algorithm and compare the results with other top players.</p>
+<p><strong>Summary of approach</strong>:</p>
+<p>First, we trained a patch-level deep learning classification model to generate probsmap from whole slide images. Second, we extract feature from probsmap. Last, we feed the feature to a mechine learning model to make wsi-level decisions. All our method based on above pipeline. The above pipline can achieve good results. Then we paid more attention to data understanding. It turns out that the understanding of the data is very important.</p>
+<p>Check out the <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/tree/main/2nd%20Place">team's full write-up and solution</a> in the <a href="https://github.com/drivendataorg/tissuenet-cervical-biopsies/">competition repo</a>.</p>
+<hr />
+<p><strong>Thanks to all the participants and to our winners!</strong> Special thanks to French Society of Pathology and the Health Data Hub for enabling this fascinating challenge and for providing the data to make it possible!</p></div>
+                        <div>
+
+                            <div class="flex gap-4 mt-15">
+                                <h2 class="text-2xl font-bold">Tags</h2>
+                                <div class="flex flex-wrap gap-3 items-center">
+<a class="component-tag" href="/tag/winners/">winners</a><a class="component-tag" href="/tag/competition/">competition</a><a class="component-tag" href="/tag/health/">health</a>                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div class="pt-20"></div>
+
+<section class="section-content" id="subscribe">
+  <div class="bg-[#F4FAFF] border border-[#BADDFA] rounded-md p-5 lg:p-10 flex items-end gap-x-10 flex-col lg:flex-row">
+    <div>
+      <div class="mb-3 flex gap-x-5 flex-wrap-reverse items-center">
+        <h2 class="h3 font-display mb-2">Stay updated</h2>
+<ul class="flex items-center">
+  <li>
+    <a aria-label="X"
+       target="_blank"
+       href="https://x.com/drivendataorg">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.9012 2H22L15.2286 9.74043L23.1931 22H16.9564L12.0722 14.5628L5.56339 22H2.46243L9.70639 13.7227L2.06445 2H8.46051L12.8753 8.79829L18.9012 2ZM17.8136 20.0321H19.5307L7.52752 3.86474H5.68547L17.8136 20.0321Z"
+                fill="currentColor" />
+        </svg>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a aria-label="Bluesky" target="_blank" href="https://bsky.app/profile/drivendata.org">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.33526 3.34625C8.62822 5.30132 11.0945 9.26541 12.0001 11.3928C12.9056 9.26556 15.3718 5.30128 17.6649 3.34625C19.3193 1.93554 22 0.844017 22 4.3173C22 5.01097 21.6498 10.1444 21.4444 10.9778C20.7306 13.8753 18.1292 14.6143 15.8152 14.167C19.86 14.9489 20.8889 17.5387 18.6668 20.1285C14.4465 25.047 12.601 18.8944 12.1278 17.3179C12.0412 17.0289 12.0006 16.8937 12 17.0086C11.9994 16.8937 11.9588 17.0289 11.8721 17.3179C11.3993 18.8944 9.55378 25.0472 5.33322 20.1285C3.11103 17.5387 4.13995 14.9487 8.18483 14.167C5.87077 14.6143 3.26934 13.8753 2.55555 10.9778C2.35016 10.1443 2 5.01089 2 4.3173C2 0.844017 4.68074 1.93554 6.33515 3.34625H6.33526Z" stroke="black" style="stroke:currentColor;" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </span></a>
+    </li>
+    <li>
+      <a aria-label="LinkedIn"
+         target="_blank"
+         href="https://www.linkedin.com/company/9202422/">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-linkedin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="GitHub"
+         target="_blank"
+         href="https://github.com/drivendataorg">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-github"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+  <path d="M9 18c-4.51 2-5-2-7-2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="RSS" target="_blank" href="https://www.drivendata.co/feeds/all.atom.xml">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-rss"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>  </div>
+</a>
+    </li>
+  </ul>      </div>
+      <p class="text-lg/6 lg:mb-2">
+        Join our newsletter or follow us for the latest on our social impact
+        projects, data science competitions and open source work.
+      </p>
+    </div>
+    <div class="w-full flex flex-col items-end gap-4 lg:max-w-md">
+      <div class="w-full">
+<!-- Begin Brevo Form -->
+<style>
+    .sib-form,
+    .sib-form-block,
+    #sib-container,
+    .sib-input,
+    .sib-form-message-panel__text {
+        padding: 0 !important;
+    }
+
+    #sib-container {
+        background: transparent !important;
+    }
+
+    .sib-form-message-panel {
+        margin: 0 0 0.5rem 0 !important;
+    }
+
+    .sib-form input:focus,
+    .sib-form-block__button:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 2px #3b82f6 !important;
+    }
+
+    #sib-container input::placeholder {
+        color: currentColor;
+    }
+</style>
+<link rel="stylesheet"
+      href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+<div class="sib-form">
+  <div id="sib-form-container"
+       class="sib-form-container"
+       style="/* on submit, the page will scroll to above this padding */ padding-top: 1rem">
+    <div id="error-message"
+         class="sib-form-message-panel"
+         style="font-size:14px;
+                text-align:left;
+                font-family:Helvetica, sans-serif;
+                color:#661d1d;
+                background-color:#ffeded;
+                border-radius:6px;
+                border-color:#ff4949">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">There was a problem. Please try again.</span>
+      </div>
+    </div>
+    <div></div>
+    <div id="success-message"
+         class="sib-form-message-panel"
+         style="font-size:14px;
+                text-align:left;
+                font-family:Helvetica, sans-serif;
+                color:#085229;
+                background-color:#e7faf0;
+                border-radius:6px;
+                border-color:#13ce66">
+      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+        </svg>
+        <span class="sib-form-message-panel__inner-text">Subscribe successful!</span>
+      </div>
+    </div>
+
+    <div id="sib-container"
+         class="sib-container--large sib-container--vertical">
+      <form id="sib-form"
+            method="POST"
+            action="https://sibforms.com/serve/MUIFAL0aQLUucsz3yqesAdTDeRhPjjIWMkPo0MvsorIPZsPU0uDu-b4IO3BOIcEggD477kzth-g2-wm_4WYEo9E8KPkbYrija3Rpw_lBJ9c0vVjThJhx5ukJaGmiZmrH7zaRammIC6etJowU4WJ_-tAX9azZqZls-Yi4pk8gSKe4H5F9kl2vbJ2KKBg5XW-wWfiXTbYHRZnm6tec"
+            data-type="subscription">
+
+        <div style="position: relative; align-items: center; position: relative">
+          <div class="sib-input sib-form-block" style="width: 100%;">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="sr-only entry__label" for="EMAIL" data-required="*">Email</label>
+
+                <div class="entry__field" style="margin: 0; border: none;">
+                  <input class="input "
+                         type="text"
+                         id="EMAIL"
+                         name="EMAIL"
+                         autocomplete="off"
+                         placeholder="Your email"
+                         data-required="true"
+                         required
+                         style="border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border: none;
+                                border-radius: 6px;
+                                border: 1px solid #17344A;
+                                border-radius: 6px;
+                                width: 100%" />
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary"
+                     style="font-size:16px;
+                            color:#661d1d"></label>
+              <label class="entry__error entry__error--primary"></label>
+
+            </div>
+          </div>
+
+          <div class="sib-form-block" style="text-align: left">
+            <button class="sib-form-block__button sib-form-block__button-with-loader"
+                    style="font-size:16px;
+                           text-align:left;
+                           color:#FFFFFF;
+                           background-color:#17344A;
+                           border: none;
+                           border-radius: 0;
+                           display: flex;
+                           position: absolute;
+                           right: 0;
+                           top: 0;
+                           bottom: 0;
+                           height: 40px;
+                           border-top-right-radius: 6px;
+                           border-bottom-right-radius: 6px;
+                           z-index: 1"
+                    form="sib-form"
+                    type="submit">
+              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                   viewBox="0 0 512 512">
+                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+              </svg>
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <div class="g-recaptcha-v3"
+             data-sitekey="6Lc5OR0rAAAAAALUFx2-TDRRurRsxylpJHQPgMI3"
+             style="display: none"></div>
+
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'en';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+    window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+    window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+    window.translation = {
+        common: {
+            selectedList: '{quantity} list selected',
+            selectedLists: '{quantity} lists selected',
+            selectedOption: '{quantity} selected',
+            selectedOptions: '{quantity} selected',
+        }
+    };
+
+    var AUTOHIDE = Boolean(0);
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+<!-- End Brevo Form -->
+
+<!-- ReCAPTCHA -->
+<script defer
+        src="https://www.google.com/recaptcha/api.js?render=6Lc5OR0rAAAAAALUFx2-TDRRurRsxylpJHQPgMI3&hl=en"></script>
+<div class="text-xs mt-1">
+  Protected by reCAPTCHA. The Google
+  <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and
+  <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+</div>
+<style>
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
+</style>
+<!-- End ReCAPTCHA --></div>
+    </div>
+  </div>
+</section>        <div class="pt-20"></div>
+
+
+
+<section>
+  <div class="flex flex-col items-center justify-center">
+    <div class="section-content">
+      <div class="flex flex-col">
+        <div class="flex justify-between align-baseline flex-wrap-reverse gap-x-10 gap-y-3">
+          <h2 class="h2 font-display -mt-4">Latest posts</h2>
+            <a class="btn-link text-primary text-xl" href="/blog/">All posts   <div class="icon-svg "
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>  </div>
+</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8"></div>
+
+    <div data-scroll-container="1"
+         class="w-screen overflow-x-scroll scrollbar-hide overscroll-x-contain">
+      <div class="max-w-7xl mx-auto px-4 lg:px-5 overscroll-x-contain">
+        <div class="flex scrollbar-hide [&>*]:w-[40ch] gap-11">
+              <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-education="1"data-tag-text data="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/productive-math-talk-reference" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kaiip-trace-the-ace.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-07-27T00:00:00-04:00" class="text-sm text-muted"> 27 Jul 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/productive-math-talk-reference" class="no-underline hover:underline">Productive math talk: a simple reference solution for Trace the Ace</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A simple scikit-learn reference solution for predicting whether a student answers their next assessment question correctly from tutoring session transcripts in the Trace the Ace challenge.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-resources="1"data-tag-competition="1"data-tag-education="1"data-tag-LLMs="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/k12-ai-infrastructure-platform-launch" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kaiip-platform-launch.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/resources/">resources</a>    <div>
+        <time datetime="2026-06-16T00:00:00-04:00" class="text-sm text-muted"> 16 Jun 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/k12-ai-infrastructure-platform-launch" class="no-underline hover:underline">Launching the K-12 AI Infrastructure Platform</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Open Datasets, Benchmarks, and Challenges for Education AI</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/on-top-of-pasketti-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-group-small.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2026-06-12T00:00:00-04:00" class="text-sm text-muted"> 12 Jun 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/on-top-of-pasketti-winners" class="no-underline hover:underline">Meet the winners of the On Top of Pasketti: Children's Speech Recognition Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how competition winners, working with one of the largest labeled children's speech datasets assembled, cut transcription error rates in half.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/impact-report" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/dendrogram-impact-report.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-05-21T00:00:00-04:00" class="text-sm text-muted"> 21 May 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/impact-report" class="no-underline hover:underline">DrivenData 10-Year Impact Report: Three pathways to creating social impact with data science and AI</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>An overview of how DrivenData’s impact is built through projects, portfolios, and people working together.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-audio data="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/child-asr-phonetic-reference-implementation" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-phon-small.jpeg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-03-10T00:00:00-04:00" class="text-sm text-muted"> 10 Mar 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/child-asr-phonetic-reference-implementation" class="no-underline hover:underline">Improving Automatic Speech Recognition for Kids - A Reference Implementation for Phonetic-level Transcription</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A step-by-step guide to training a model to predict phonetic symbols for the On Top of Pasketti Challenge (Phonetic Track)</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-tutorial="1"data-tag-competition="1"data-tag-audio data="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/child-asr-word-benchmark" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/gates-asr-word-small.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/tutorial/">tutorial</a>    <div>
+        <time datetime="2026-02-27T00:00:00-05:00" class="text-sm text-muted"> 27 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/child-asr-word-benchmark" class="no-underline hover:underline">Improving Automatic Speech Recognition for Kids - A Reference Implementation for Word-level Transcription</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how to train a model to transcribe child speech for the On Top of Pasketti Challenge (Word Track)</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-resources="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/pipeline-challenges" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/data-pipeline.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-02-18T00:00:00-05:00" class="text-sm text-muted"> 18 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/pipeline-challenges" class="no-underline hover:underline">5 Challenges of Creating Beautiful Data Pipelines</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>A look into the hidden complexity of data pipelines, and some suggestions to improve the process.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-LLMs="1"data-tag-competition="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/ai-agents-data-science-competitions" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/ai-agents-data-science-competitions.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-02-02T00:00:00-05:00" class="text-sm text-muted"> 2 Feb 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/ai-agents-data-science-competitions" class="no-underline hover:underline">AI Agents in Data Science Competitions: Lessons from the Leaderboard</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>How good are AI agents at data science? Here's what we've learned from initial experiments about what works, what doesn't, and what the future might hold.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/candid" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/case-study-candid.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2026-01-28T00:00:00-05:00" class="text-sm text-muted"> 28 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/candid" class="no-underline hover:underline">Linking nonprofit grants to organizations with machine learning</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData built Orgmatch, a scalable and explainable entity resolution system to add value to information processed by a leading nonprofit data hub.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-tools="1"data-tag-open source="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/cyfi-small-water-bodies" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/cyfi-example-water-body-1.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-01-27T00:00:00-05:00" class="text-sm text-muted"> 27 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/cyfi-small-water-bodies" class="no-underline hover:underline">Bringing small water bodies into view: Sentinel-2 satellite monitoring of harmful algal blooms (HABs)</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>CyFi enhances modern HAB monitoring programs by extending their reach and informing field-based components.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-insights="1"data-tag-tools="1"data-tag-open source="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/last-mile-public-data" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/last-mile-timeline.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/insights/">insights</a>    <div>
+        <time datetime="2026-01-05T00:00:00-05:00" class="text-sm text-muted"> 5 Jan 2026</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/last-mile-public-data" class="no-underline hover:underline">Solving the last-mile public data problem</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Using "baked" data to transform public data repositories into analysis-ready resources</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-media="1"data-tag-energy="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/drivendata-joins-genesis-mission" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/genesis-mission-launch.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/media/">media</a>    <div>
+        <time datetime="2025-12-22T00:00:00-05:00" class="text-sm text-muted"> 22 Dec 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/drivendata-joins-genesis-mission" class="no-underline hover:underline">DrivenData Joins U.S. Department of Energy's Genesis Mission to Advance AI for Science and the Public Good</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Social impact data science organization brings decade of federal open innovation experience to historic national initiative</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/tangled-titles" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/bwdc-case-study.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-12-05T00:00:00-05:00" class="text-sm text-muted"> 5 Dec 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/tangled-titles" class="no-underline hover:underline">Quantifying unclear property titles (“tangled titles”) trapping billions in wealth in American cities</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData conducted a multi-city study of the prevalence and sources of tangled titles in partnership with the Center for Opportunity and Wealth Data to help policymakers and practitioners combat a major barrier to building intergenerational wealth.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-health="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/prepare-phase3-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/prepare-challenge-tile.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2025-11-24T00:00:00-05:00" class="text-sm text-muted"> 24 Nov 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/prepare-phase3-winners" class="no-underline hover:underline">Meet the winners of Phase 3 of the PREPARE Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how teams developed proof-of-concept approaches for real-world early Alzheimer's prediction</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-winners="1"data-tag-competition="1"data-tag-education="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/aiai-winners" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/uva-aiai-tile.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/winners/">winners</a>    <div>
+        <time datetime="2025-10-22T00:00:00-04:00" class="text-sm text-muted"> 22 Oct 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/aiai-winners" class="no-underline hover:underline">Meet the winners of the AI for Advancing Instruction Challenge</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>Learn how the winners of the AIAI challenge leveraged multimodal classroom data to identify instructional activities and classroom discourse content.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies/automating-wildlife-monitoring-with-zamba-zamba-cloud" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/case-study-zamba.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-09-04T00:00:00-04:00" class="text-sm text-muted"> 4 Sep 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies/automating-wildlife-monitoring-with-zamba-zamba-cloud" class="no-underline hover:underline">Automating wildlife monitoring with Zamba & Zamba Cloud</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData partnered with conservation researchers to create Zamba, an open-source machine learning solution that helps wildlife researchers process camera trap footage, reducing months of manual review to hours of automated analysis.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/community-spotlight-igcpharma" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/igcpharma_spotlight.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/community/">community</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/community-spotlight-igcpharma" class="no-underline hover:underline">Community Spotlight: Paola Ruiz, Néstor González, Daniel Crovo</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>The Community Spotlight features fantastic members from our DrivenData community. Three members of the IGCPHARMA team, Paola Ruiz, Néstor González, and Daniel Crovo talk to us about data science, drug discovery, diverse databases and more!</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+data-tag-community="1">
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/blog/community-spotlight-kbrodt" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/kbrodt.jpeg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/tag/community/">community</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/blog/community-spotlight-kbrodt" class="no-underline hover:underline">Community Spotlight: Kirill Brodt</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>The Community Spotlight features fantastic members from our DrivenData community. Kirill Brodt, a researcher in computer graphics at the University of Montreal, talks animation, pose estimation, and data science challenges.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies//codepath-data-infrastructure" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/client-codepath-data-infrastructure.jpg"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-06-20T00:00:00-04:00" class="text-sm text-muted"> 20 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies//codepath-data-infrastructure" class="no-underline hover:underline">Jump-starting data infrastructure and in-house data expertise</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData designed and built a data warehouse to centralize, organize, and visualize data across CodePath's operations. Our team also provided technical hiring assistance to find the right talent to carry the work forward.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="shrink-0 snap-start">
+
+
+
+
+  <div class="group flex flex-col h-full  gap-4"
+>
+    <div class="overflow-hidden border border-border-weak rounded">
+      <a href="/case-studies//production-application-survivor-support" aria-hidden="true" tabindex="-1">
+        <div class="relative">
+          <img src="/images/everfree-freedom-lifemap.png"
+               class="duration-600  transition ease-in-out w-full h-40 object-cover  group-hover:scale-105 bg-placeholder"
+               loading="lazy"
+               alt="" />
+        </div>
+      </a>
+    </div>
+    <div>
+      <p>
+<div class="flex gap-2 items-baseline">
+<a class="category" href="/case-studies/">case studies</a>    <div>
+        <time datetime="2025-06-04T00:00:00-04:00" class="text-sm text-muted"> 4 Jun 2025</time>
+    </div>
+</div>
+
+</p>
+      <h3 class="text-xl/5 mb-2 ">
+        <a href="/case-studies//production-application-survivor-support" class="no-underline hover:underline">A production application to support survivors of human trafficking</a>
+      </h3>
+      <div class="mt-1 text-muted **:leading-tight">
+        <span class="line-clamp-5 **:text-base"><p>DrivenData developed Freedom Lifemap, a digital tool designed to support survivors of human trafficking on their journey toward reintegration and independence.</p></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <div style="padding-right: calc((100vw - var(--container-7xl)) / 2 - var(--spacing) * 5)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <div class="flex gap-2 justify-end text-primary text-3xl mt-5">
+        <button data-scroll-direction="previous"
+                class="btn-outline-secondary p-1 px-5"
+                aria-label="Previous">  <div class="icon-svg icon-lg"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-chevron-left"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m15 18-6-6 6-6" />
+</svg>  </div>
+</button>
+        <button data-scroll-direction="next"
+                class="btn-outline-secondary p-1 px-5"
+                aria-label="Next">  <div class="icon-svg icon-lg"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-chevron-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m9 18 6-6-6-6" />
+</svg>  </div>
+</button>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="pt-20"></div>
+<section class="section-content">
+  <div class="bg-default text-white rounded p-10 lg:p-20 flex flex-col text-center items-center gap-10 justify-between">
+    <div class="max-w-5xl">
+      <h2 class="h2 text-inverse-accent font-display mb-5 text-balance">Work with us to build a better world</h2>
+      <p class="text-xl max-w-5xl mx-auto text-balance">
+        Learn more about how our team is bringing the transformative power of data science and AI to organizations tackling the world's biggest challenges.
+      </p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 max-w-md w-full">
+      <a href="/#contact" class="btn-inverse-primary text-lg grow">Contact us</a>
+      <a href="/" class="btn-inverse-outline-primary text-lg grow">Learn more
+        <span class="sr-only">about us</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+    <div class="pt-20"></div>
+        </div>
+
+<footer class="bg-[#0C1A26] text-white py-20 flex flex-col items-center">
+  <div class="section-content grid gap-8 grid-cols-1 xl:grid-cols-[500px_1fr]">
+    <div class="max-w-md">
+      <a href="https://www.drivendata.co"
+         class="flex items-start max-w-100 w-full"
+         aria-label="DrivenData">  <div class="icon-svg flex w-full"
+>
+<svg enable-background="new 0 0 967.5 155.9" viewBox="0 0 967.5 155.9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="617.1313" x2="743.1313" xlink:href="#a" y1="8.5736" y2="8.5736"/><linearGradient id="c" gradientUnits="userSpaceOnUse" x1="617.1313" x2="825.0314" xlink:href="#a" y1="36.2936" y2="36.2936"/><linearGradient id="d" gradientUnits="userSpaceOnUse" x1="617.1313" x2="888.0314" xlink:href="#a" y1="64.0136" y2="64.0136"/><linearGradient id="e" gradientUnits="userSpaceOnUse" x1="617.1313" x2="773.2313" xlink:href="#a" y1="91.7336" y2="91.7336"/><linearGradient id="f" gradientUnits="userSpaceOnUse" x1="617.1313" x2="873.3314" xlink:href="#a" y1="119.4536" y2="119.4536"/><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="617.1313" x2="946.8314" xlink:href="#a" y1="147.1736" y2="147.1736"/><path d="m738.2 17.1h-121.1v-17h126z" fill="url(#b)"/><path d="m617.1 27.8h207.9v17h-207.9z" fill="url(#c)"/><path d="m883.1 72.5h-266v-17h270.9z" fill="url(#d)"/><path d="m773.2 100.2h-156.1v-17h152.6z" fill="url(#e)"/><path d="m869.1 128h-252v-17h256.2z" fill="url(#f)"/><path d="m946.8 155.7h-329.7v-17h325.5z" fill="url(#g)"/><g fill="#fff"><path d="m0 155.9v-155.9h60.7c7.1 0 21.2 3.1 30.1 17.7 6.7 10.8 8.5 28.1 8.5 53.8 0 30.8 0 66.3-23.9 80.2-6.4 3.7-14.3 4.2-21.6 4.2zm41.8-22.8c26 0 27.7-13.7 27.7-58.8 0-36.8-3.7-51.4-21.2-51.4h-19.2v110.2z"/><path d="m146.3 88.8v67.2h-29.1v-156h55.1c25.2 0 44.3 8.7 44.3 37.4 0 17-4.4 34.9-23.9 37.6v.4c17.3 2.3 22.5 13.3 22.5 28.3v6.7c0 13.1.4 38.9 6.2 42.6v2.9h-32c-2.9-8.1-3.1-22.2-3.1-32.6v-6.9c-.2-9.6 0-22.7-10-25.6-6.7-1.9-13.7-2.1-20.8-2.1h-3.9-5.3zm0-22.9h22.9c9.6-.6 17-6.9 17-22.5 0-17.5-7.3-20.4-18.3-20.6h-21.6z"/><path d="m237.2 155.9v-155.9h29.1v155.9z"/><path d="m355.5 0h31.2l-33.7 155.9h-38.9l-34.4-155.9h31.2l18.3 100c1.7 8.7 2.7 17.7 3.5 26.6.4 4.2 1.2 8.5 1.2 12.9h.4c0-4.4.8-8.7 1.2-12.9.8-8.9 1.9-17.9 3.5-26.6z"/><path d="m399.7 155.9v-155.9h81.9v22.9h-52.8v39.3h48.6v22.8h-48.6v48h52.8v22.9z"/><path d="m566.8 0h29.1v155.9h-30.4l-22.7-55.5c-7.7-18.5-13.9-37.4-20.8-62h-.4c1 12.9 2.3 28.7 3.1 44.5.8 15.6 1.5 31.2 1.5 43.7v29.3h-29.1v-155.9h30.1l22.7 56.8c7.5 18.1 13.7 36.6 20.8 62h.4c-1-14.1-2.1-29.3-2.9-44.3s-1.5-29.9-1.5-43.9v-30.6z"/><path d="m616.5 0h27.9c17.7 0 33.5 1 46.2 14.8 10.4 12.5 15 35.8 15 51.4 0 17.7.4 41.2-6 58-9.6 26.8-26.4 31.8-52.4 31.8h-30.6v-156zm13.6 143.9h16.2c7.7 0 16.8 0 23.9-3.3 20.8-9.6 21.8-43.9 21.8-62.8 0-19.8.4-50.9-20.2-62.2-8.1-4.4-20.8-4-30.1-3.5h-11.6z"/><path d="m766.6 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/><path d="m796.4 12.1v-12.1h84.2v12.1h-35.3v143.9h-13.5v-143.9z"/><path d="m925.7 0 41.8 155.9h-13.7l-12.3-48h-47.4l-12.7 48h-13.1l41.9-155.9zm12.9 95.8-20.5-78.8h-.4l-20.6 78.8z"/></g></svg>  </div>
+</a>
+      <p class="text-lg/tight mt-4 text-pretty max-w-100">
+        We use data science & AI to help mission-driven
+        organizations offer more
+        impactful services
+      </p>
+
+    </div>
+    <div
+      class="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] w-full gap-10 [&_a]:!no-underline mt-10 xl:m-0">
+      <div class="order-1 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">About</h3>
+        <a class="opacity-70" href="/team/">Meet the team</a>
+        <a class="opacity-70" href="/#contact">Contact us</a>
+        <a class="opacity-70"
+           href="https://apply.workable.com/drivendata/"
+           target="_blank">Careers</a>
+        <a class="opacity-70" href="/#faq">FAQ</a>
+      </div>
+
+      <div class="order-3 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="/#services">Services</a>
+        </h3>
+          <a class="opacity-70" href="/#data-science-and-ai">Data science & AI</a>          <a class="opacity-70" href="/#software-engineering">Software engineering</a>          <a class="opacity-70" href="/#data-engineering">Data engineering</a>          <a class="opacity-70" href="/#data-strategy">Data strategy</a>      </div>
+
+      <div class="order-5 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">Open source</h3>
+        <a class="opacity-70"
+           href="https://cookiecutter-data-science.drivendata.org/"
+           target="_blank">Cookiecutter Data Science</a>
+        <a class="opacity-70"
+           href="https://deon.drivendata.org/"
+           target="_blank">Deon: Ethics checklist</a>
+        <a class="opacity-70"
+           href="https://zamba.drivendata.org/"
+           target="_blank">Zamba: Wildlife monitoring</a>
+        <a class="opacity-70"
+           href="https://github.com/drivendataorg/competition-winners"
+           target="_blank">Models from competitions</a>
+        <a class="opacity-70" href="/open-source/">All open source projects</a>
+      </div>
+
+      <div class="order-2 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">Resources</h3>
+        <a class="opacity-70" href="/blog/">Blog</a>
+        <a class="opacity-70" href="/projects/">Projects</a>
+        <a class="opacity-70" href="/insights/">Insights</a>
+        <a class="opacity-70" href="/case-studies/">Case studies</a>
+      </div>
+
+      <div class="order-4 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="https://www.drivendata.org/" target="_blank">Competitions</a>
+        </h3>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitions/"
+           target="_blank">Join a competition</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/partners/"
+           target="_blank">Run a competition</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitors/"
+           target="_blank">How competitions work</a>
+        <a class="opacity-70"
+           href="https://www.drivendata.org/competitions/search/"
+           target="_blank">Past competitions</a>
+      </div>
+
+      <div class="order-6 md:order-none flex flex-col gap-1">
+        <h3 class="text-lg font-display uppercase">
+          <a href="/government/" target="_blank">Government</a>
+        </h3>
+        <a class="opacity-70" href="/government/">Contract Vehicles</a>
+        <a class="opacity-70" href="/government/DrivenData, Inc - Capability Statement - Federal (2025).pdf">
+          Capability Statement
+        </a>
+      </div>
+
+    </div>
+    <div class="text-2xl flex flex-col gap-1 xl:justify-between mt-10 xl:mt-20">
+      <div class="-ml-1.5 "><ul class="flex items-center">
+  <li>
+    <a aria-label="X"
+       target="_blank"
+       href="https://x.com/drivendataorg">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.9012 2H22L15.2286 9.74043L23.1931 22H16.9564L12.0722 14.5628L5.56339 22H2.46243L9.70639 13.7227L2.06445 2H8.46051L12.8753 8.79829L18.9012 2ZM17.8136 20.0321H19.5307L7.52752 3.86474H5.68547L17.8136 20.0321Z"
+                fill="currentColor" />
+        </svg>
+      </span>
+    </a>
+  </li>
+  <li>
+    <a aria-label="Bluesky" target="_blank" href="https://bsky.app/profile/drivendata.org">
+      <span class="icon-svg rounded-full flex p-2">
+        <svg width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.33526 3.34625C8.62822 5.30132 11.0945 9.26541 12.0001 11.3928C12.9056 9.26556 15.3718 5.30128 17.6649 3.34625C19.3193 1.93554 22 0.844017 22 4.3173C22 5.01097 21.6498 10.1444 21.4444 10.9778C20.7306 13.8753 18.1292 14.6143 15.8152 14.167C19.86 14.9489 20.8889 17.5387 18.6668 20.1285C14.4465 25.047 12.601 18.8944 12.1278 17.3179C12.0412 17.0289 12.0006 16.8937 12 17.0086C11.9994 16.8937 11.9588 17.0289 11.8721 17.3179C11.3993 18.8944 9.55378 25.0472 5.33322 20.1285C3.11103 17.5387 4.13995 14.9487 8.18483 14.167C5.87077 14.6143 3.26934 13.8753 2.55555 10.9778C2.35016 10.1443 2 5.01089 2 4.3173C2 0.844017 4.68074 1.93554 6.33515 3.34625H6.33526Z" stroke="black" style="stroke:currentColor;" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </span></a>
+    </li>
+    <li>
+      <a aria-label="LinkedIn"
+         target="_blank"
+         href="https://www.linkedin.com/company/9202422/">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-linkedin"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="GitHub"
+         target="_blank"
+         href="https://github.com/drivendataorg">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-github"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+  <path d="M9 18c-4.51 2-5-2-7-2" />
+</svg>  </div>
+</a>
+    </li>
+    <li>
+      <a aria-label="RSS" target="_blank" href="https://www.drivendata.co/feeds/all.atom.xml">  <div class="icon-svg rounded-full flex p-2"
+>
+<!-- @license lucide-static v0.473.0 - ISC -->
+<svg
+  class="lucide lucide-rss"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>  </div>
+</a>
+    </li>
+  </ul></div>
+      <p class="text-base/5">
+        <a class="font-bold" href="/#subscribe">Subscribe to our newsletter</a>
+        <span class="opacity-70 hidden xl:inline-block">or follow us for updates!</span>
+      </p>
+    </div>
+
+    <div class="order-6 xl:order-none flex self-end -mb-1 xl:text-right xl:justify-end">
+      <div>
+
+        <div class="opacity-70">
+          <a href="mailto:info@drivendata.org" target="_blank">info@drivendata.org</a>
+          <br class="block"/>
+          &copy; 2026 DrivenData LLC,
+          <br class="block xl:hidden"/>
+          700 Colorado Blvd #611,
+          <br class="block xl:hidden"/>
+          Denver, CO 80206
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+        <script>
+            // Automatically expand a <details> accordian if you visit its anchor link e.g. expand <details id="service"> when you visit URL `/#service`
+            function openDetailsMatchingHashLink() {
+                const hashLink = window.location.hash;
+
+                if (!hashLink) return;
+
+                const elDetails = document.querySelector(hashLink);
+                if (elDetails?.tagName?.toLowerCase() === "details") {
+                    elDetails.open = true;
+                }
+            }
+            document.addEventListener("DOMContentLoaded", openDetailsMatchingHashLink);
+            window.addEventListener("hashchange", openDetailsMatchingHashLink);
+
+            // e.g. opening <details id="service"> will save #service to the location bar so it's easier to copy/share the link 
+            function saveAnchorTagWhenOpeningDetails() {
+                document.querySelectorAll('details[id]').forEach(details => {
+                    details.addEventListener('toggle', () => {
+                        if (details.open) {
+                            history.replaceState(null, '', `#${details.id}`);
+                        }
+                    });
+                });
+            }
+            saveAnchorTagWhenOpeningDetails();
+        </script>
+
+        <script>
+            function initCardScrollerButtons() {
+                document.querySelectorAll("[data-scroll-direction]").forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const section = button.closest("section");
+                        const container = section.querySelector("[data-scroll-container]");
+
+                        const cardStyles = getComputedStyle(container.children[0].children[0]);
+                        const cardGap = parseFloat(cardStyles.columnGap || cardStyles.gap || 0);
+                        const cardWidth = container.children[0].children[0].children[1].offsetWidth + cardGap;
+
+                        const containerVisibleWidth = container.clientWidth;
+                        const containerFullWidth = container.scrollWidth;
+                        const currentCardScrollX = Math.floor(container.scrollLeft / cardWidth) * cardWidth;
+
+                        const isAtScrollStart = currentCardScrollX - cardWidth < 0;
+                        const isAtScrollEnd = container.scrollLeft + containerVisibleWidth >= containerFullWidth;
+
+                        const scrollForwardX = isAtScrollEnd ? 0 : currentCardScrollX + cardWidth;
+                        const scrollBackwardX = isAtScrollStart ? containerFullWidth : currentCardScrollX - cardWidth;
+
+                        const isScrollingForward = button.dataset.scrollDirection === "next";
+                        const newScrollX = isScrollingForward ? scrollForwardX : scrollBackwardX;
+
+                        container.scrollTo({
+                            left: newScrollX,
+                            behavior: "smooth",
+                        });
+                    }, {
+                        passive: true
+                    });
+                });
+            }
+            document.addEventListener("DOMContentLoaded", initCardScrollerButtons);
+        </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-89F370DQLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-89F370DQLF');
+  </script>
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/23393052.js"></script>
+    <script>
+        function tocScrollSpy() {
+            const links = document.querySelectorAll('.toc a');
+            const sections = document.querySelectorAll(':is(h1, h2, h3, h4, h5, h6)[id]');
+            let lastScrollY = window.scrollY;
+
+            function hightlight(element) {
+                links.forEach(s => s.removeAttribute('aria-current'));
+                element.setAttribute('aria-current', 'true');
+            }
+
+            if (!window.location.hash) {
+                hightlight(links[0]);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const link = document.querySelector(`a[href="#${entry.target.id}"]`);
+                    if (!link) return;
+
+                    const isScrollingDown = window.scrollY > lastScrollY;
+                    const isScrollingUp = !isScrollingDown;
+
+                    const atBottom = entry.boundingClientRect.bottom > entry.rootBounds.height / 2;
+                    const atTop = !atBottom;
+
+                    if (isScrollingDown && atBottom) {
+                        hightlight(link);
+                    } else if (isScrollingUp && atTop) {
+                        hightlight(link);
+                    }
+                });
+
+                lastScrollY = window.scrollY;
+            }, {
+                threshold: [0.5],
+                rootMargin: `0px 0px -70% 0px` // Intersection rectangle is only narrow and at the top because when more than one heading can be inside the rectangle at the same time, it creates lots of tricky edge cases about which heading is the active one
+            });
+            sections.forEach(section => observer.observe(section));
+
+        }
+        tocScrollSpy();
+    </script>
+
+    </body>
+</html>

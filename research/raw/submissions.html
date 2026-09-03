@@ -1,0 +1,248 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+  
+  Login
+
+
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DrivenData" />
+    
+    <link rel="icon" href="https://drivendata-prod-public.s3.amazonaws.com/favicon.d9d9c8790050.ico">
+    
+    <meta property="og:site_name" content="DrivenData Competitions" />
+    
+      <meta name="description"
+            content="DrivenData hosts data science competitions to build a better world, bringing cutting-edge predictive models to organizations tackling the world's toughest problems." />
+    
+    
+      
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/dist/assets/app-CId6t1mQ.9e34094dbb76.css" rel="stylesheet">
+      
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/vendor/fontawesome/css/fontawesome.min.63ea6c496f8c.css"
+            rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/vendor/fontawesome/css/solid.min.a1961264a2c1.css"
+            rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/vendor/fontawesome/css/regular.min.c0ac0aef9cad.css"
+            rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/vendor/fontawesome/css/brands.min.d4c355f1930b.css"
+            rel="stylesheet">
+      
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/global.300167c006cf.css?v=3" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/global_base.fab7c41c201f.css?v=2" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/global_utils.6b7b89c57d9c.css?v=1" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/global_components.ba7b851408ed.css?v=2" rel="stylesheet">
+      
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/project.b23e047f83aa.css?v=1" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/accessible-colors.d41d8cd98f00.css?v=1" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/homepage.f01af6bef058.css?v=1" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/components.3b5994b7e938.css?v=1" rel="stylesheet">
+      <link href="https://drivendata-prod-public.s3.amazonaws.com/css/animations.20c827374947.css?v=1" rel="stylesheet">
+    
+    
+<script id="app-config" type="application/json">{"sentryDsn": "https://b6cf330367d97d356b38446834aa0b95@o15121.ingest.us.sentry.io/4511632688414720", "environment": "production", "release": "e7da2b4ca6f02c332052c39f1d7f431216637035", "gaKey": "G-Z4K0VQDRX2", "posthogToken": "", "posthogHost": "https://us.i.posthog.com", "user": null}</script>
+<script>window.__APP__ = JSON.parse(document.getElementById("app-config").textContent);</script>
+
+    
+    <script type="module" src="https://drivendata-prod-public.s3.amazonaws.com/dist/assets/sentry-C3fWMW0J.e620d4c974bd.js"></script>
+    
+      
+
+<script>
+  (function () {
+    var cfg = window.__APP__ || {};
+    if (!cfg.gaKey) return;
+    var tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(cfg.gaKey);
+    document.head.appendChild(tag);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", cfg.gaKey, cfg.user && cfg.user.id ? { user_id: cfg.user.id } : {});
+  })();
+</script>
+
+
+
+
+    
+    
+    <script defer src="https://drivendata-prod-public.s3.amazonaws.com/js/alpine.3.15.12.min.422c7d8cfa8b.js"></script>
+    
+    <script defer src="https://drivendata-prod-public.s3.amazonaws.com/js/_hyperscript.0.9.91.min.61f8f97e7bb0.js"></script>
+  </head>
+  <body class="">
+    
+  
+<nav class="navbar nav-header-account" aria-label="Primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="https://drivendata-prod-public.s3.amazonaws.com/images/drivendata-logo.58f94dd407ef.svg"
+           height="24px"
+           alt="Go to DrivenData homepage" />
+    </a>
+  </div>
+</nav>
+<div class="pt-4"></div>
+
+
+    
+    <main class="main">
+      <div id="wrapper">
+        <div id="main-container">
+          
+          
+          <div class="container-fluid">
+            
+              <div class="js-messages">
+  
+  <div id="inline-messages"
+       class="d-flex flex-column messages-container gap-2">
+    
+  </div>
+  
+  <div id="toast-container"
+       class="toast-container position-fixed start-0 bottom-0 m-3">
+    
+  </div>
+  
+  <template id="toast-template">
+    
+<div class="toast animate-slide-in-left"
+     role="alert"
+     aria-live="assertive"
+     aria-atomic="true"
+     data-bs-delay="6000"
+     style="max-width: fit-content;
+            --bs-toast-max-width: 80ch;
+            --bs-toast-font-size: 1rem;
+            --bs-toast-border-width: 0">
+  <div data-toast-variant
+       class=" m-0 d-flex align-items-center gap-3 justify-content-between">
+    <div class="toast-message"></div>
+    <div>
+      <button type="button"
+              class="bg-transparent border-0 text-xl float-end text-current-color"
+              data-bs-dismiss="toast"
+              aria-label="Dismiss">×</button>
+    </div>
+  </div>
+</div>
+
+  </template>
+</div>
+
+            
+            
+  
+    <div class="signup-wrapper">
+      <div class="d-flex justify-content-between align-items-baseline flex-wrap-reverse gap-2">
+        <h1 class="m-0">Login</h1>
+        <div class="text-muted">
+          Don't have an account? <a href="/accounts/signup/?next=%2Fcompetitions%2F311%2Fdat-parkinsons-challenge%2Fsubmissions%2F">Sign up</a>
+        </div>
+      </div>
+      <div class="pt-5"></div>
+      <form class="login" method="POST" action="/accounts/login/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="4ztmoFaaAOoCmJnadBD5ZiTmrZ4qD1X0HBAxlXmJqVMr98rqUoDBGwl00KaJ8wtD">
+        
+
+<div id="div_id_login" class="mb-3"> <label
+                for="id_login" class="form-label requiredField">
+                Email or username<span class="asteriskField">*</span> </label> <input type="text" name="login" autocomplete="email" class="textinput form-control" required id="id_login"> </div> <div id="div_id_password" class="mb-3"> <label
+                for="id_password" class="form-label requiredField">
+                Password<span class="asteriskField">*</span> </label> <input type="password" name="password" autocomplete="current-password" class="passwordinput form-control" required aria-describedby="id_password_helptext" id="id_password"> <div id="id_password_helptext" class="form-text"><a href="/accounts/password/reset/">Forgot your password?</a></div> </div> <div class="mb-3"> <div id="div_id_remember" class="form-check"> <input type="checkbox" name="remember" class="checkboxinput form-check-input" id="id_remember"> <label for="id_remember" class="form-check-label">
+                    Remember Me
+                </label> </div> </div> <input type="hidden" name="fingerprint" id="id_fingerprint">
+
+        
+          <input type="hidden"
+                 name="next"
+                 value="/competitions/311/dat-parkinsons-challenge/submissions/" />
+        
+        <div class="pt-5"></div>
+        <button class="btn btn-primary btn-lg w-100" type="submit">Log in</button>
+      </form>
+    </div>
+  
+
+            
+  <div class="container-fluid">
+    <div class="container">
+      <div class="signup-wrapper text-center pt-3 text-muted text-sm">
+        By continuing you agree to our
+        
+        <a href="/termsofuse/"
+           target="_blank"
+           rel="noreferrer">terms of use</a> and <a href="/privacypolicy/"
+    target="_blank"
+    rel="noreferrer">privacy policy</a>.
+      </div>
+    </div>
+  </div>
+  <div class="pt-5"></div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    
+
+    
+    
+    
+  
+      
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/js/jquery.min.5ca7582261c4.js"></script>
+      
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/vendor/bootstrap/bootstrap.bundle.min.b7ef46c92e06.js"></script>
+      
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/js/global.f763136173fc.js"></script>
+      
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/js/project.d41d8cd98f00.js"></script>
+      
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/js/htmx.2.0.10.min.6b99da76b7f7.js"></script>
+      <script src="https://drivendata-prod-public.s3.amazonaws.com/js/htmx-ext-response-targets.2.0.4.min.b6f8377a9941.js"></script>
+      
+      
+      
+      <script>
+        document.body.addEventListener('htmx:configRequest', (event) => {
+          event.detail.headers['X-CSRFToken'] = '4ztmoFaaAOoCmJnadBD5ZiTmrZ4qD1X0HBAxlXmJqVMr98rqUoDBGwl00KaJ8wtD';
+        });
+      </script>
+    
+  <script>
+  // Initialize the agent at application startup.
+  const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3')
+    .then(FingerprintJS => FingerprintJS.load())
+
+  // Get the visitor identifier when you need it. The fingerprint is optional (the
+  // server accepts an empty value), so if the third-party CDN is blocked or fails
+  // to load, leave it empty instead of surfacing an unhandled promise rejection.
+  fpPromise
+    .then(fp => fp.get())
+    .then(result => {
+      // This is the visitor identifier:
+      const visitorId = result.visitorId
+      document.getElementById("id_fingerprint").value = visitorId
+    })
+    .catch(() => {
+      // Fingerprinting unavailable (e.g. CDN blocked); submit without it.
+    })
+  </script>
+
+    
+    
+  </body>
+</html>
